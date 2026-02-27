@@ -29,12 +29,12 @@ export function Navbar() {
           : "bg-navy-dark/60 backdrop-blur-md border-b border-white/20 shadow-[0_10px_30px_rgba(3,12,24,0.35)]"
       )}
     >
-      <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group logo-hover-effect">
           <span
             className={cn(
-              "font-serif text-2xl font-bold transition-colors rounded-lg px-2 py-0.5",
+              "font-serif text-xl sm:text-2xl font-bold transition-colors rounded-lg px-2 py-0.5",
               scrolled
                 ? "text-navy"
                 : "text-white bg-white/18 ring-1 ring-white/35 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]"

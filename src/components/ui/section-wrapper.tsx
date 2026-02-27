@@ -29,7 +29,7 @@ export function SectionWrapper({
       id={id}
       className={cn(bgClasses[bg], grain && "grain-overlay", "relative", className)}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-20 md:py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-14 sm:py-20 md:py-24 relative z-10">
         {children}
       </div>
     </section>

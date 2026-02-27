@@ -15,23 +15,23 @@ export function ComparisonTable() {
       />
 
       <FadeIn>
-        <div className="max-w-3xl mx-auto overflow-x-auto bg-white rounded-2xl border border-fog shadow-sm p-2">
-          <table className="w-full border-collapse">
+        <div className="max-w-3xl mx-auto overflow-x-auto bg-white rounded-2xl border border-fog shadow-sm p-1 sm:p-2 -mx-2 sm:mx-auto">
+          <table className="w-full border-collapse min-w-[480px]">
             <thead>
               <tr>
-                <th className="text-left py-4 px-4 text-sm text-slate-brand font-medium">
+                <th className="text-left py-3 sm:py-4 px-2 sm:px-4 text-xs sm:text-sm text-slate-brand font-medium">
                   &nbsp;
                 </th>
-                <th className="text-left py-4 px-4 bg-teal/[0.03]">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-teal shadow-[0_0_8px_rgba(42,157,143,0.5)]" />
-                    <span className="text-navy font-serif text-lg">Supportive Systems Lab</span>
+                <th className="text-left py-3 sm:py-4 px-2 sm:px-4 bg-teal/[0.03]">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-teal shadow-[0_0_8px_rgba(42,157,143,0.5)] shrink-0" />
+                    <span className="text-navy font-serif text-sm sm:text-lg">SSL</span>
                   </div>
                 </th>
-                <th className="text-left py-4 px-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-slate-brand/30" />
-                    <span className="text-slate-brand font-serif text-lg">
+                <th className="text-left py-3 sm:py-4 px-2 sm:px-4">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-slate-brand/30 shrink-0" />
+                    <span className="text-slate-brand font-serif text-sm sm:text-lg">
                       Legacy Firms
                     </span>
                   </div>
@@ -44,13 +44,13 @@ export function ComparisonTable() {
                   key={row.category}
                   className={`row-hover ${idx % 2 === 0 ? "bg-cloud/50" : "bg-transparent"}`}
                 >
-                  <td className="py-4 px-4 text-sm font-medium text-navy">
+                  <td className="py-3 sm:py-4 px-2 sm:px-4 text-xs sm:text-sm font-medium text-navy">
                     {row.category}
                   </td>
-                  <td className="py-4 px-4 text-sm text-teal font-semibold bg-teal/[0.03]">
+                  <td className="py-3 sm:py-4 px-2 sm:px-4 text-xs sm:text-sm text-teal font-semibold bg-teal/[0.03]">
                     {row.ssl}
                   </td>
-                  <td className="py-4 px-4 text-sm text-slate-brand">
+                  <td className="py-3 sm:py-4 px-2 sm:px-4 text-xs sm:text-sm text-slate-brand">
                     {row.legacy}
                   </td>
                 </tr>

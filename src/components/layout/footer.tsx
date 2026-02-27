@@ -8,8 +8,8 @@ export function Footer() {
     <footer className="bg-navy-dark text-white grain-overlay">
       {/* Gradient top border */}
       <div className="h-px bg-gradient-to-r from-transparent via-teal/40 to-transparent" />
-      <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">

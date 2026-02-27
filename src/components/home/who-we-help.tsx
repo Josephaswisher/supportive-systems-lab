@@ -50,22 +50,22 @@ const cardStyles = [
 export function WhoWeHelp() {
   return (
     <SectionWrapper bg="cream">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
         <FadeIn>
-          <span className="text-sm font-medium uppercase tracking-[0.2em] text-teal">
+          <span className="text-xs sm:text-sm font-medium uppercase tracking-[0.15em] sm:tracking-[0.2em] text-teal">
             Who We Help
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl text-navy mt-2 mb-6 leading-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-navy mt-2 mb-4 sm:mb-6 leading-tight">
             Built for nonprofits carrying heavy responsibility
           </h2>
-          <p className="text-slate-brand text-lg leading-relaxed">
+          <p className="text-slate-brand text-base sm:text-lg leading-relaxed">
             You stepped in where systems were failing people. You have vision,
             trust, and urgency. What often lags is the operating infrastructure
             needed to deliver that mission consistently at scale.
           </p>
         </FadeIn>
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {PAIN_POINTS.map((point, idx) => {
             const style = cardStyles[idx];
             const Icon = style.icon;
@@ -78,7 +78,7 @@ export function WhoWeHelp() {
                 className="group relative cursor-default"
               >
                 <div
-                  className={`relative overflow-hidden rounded-2xl p-6 bg-gradient-to-br ${style.gradient} ring-1 ${style.ring} shadow-lg hover:shadow-2xl transition-shadow duration-500 h-full min-h-[180px] flex flex-col justify-between`}
+                  className={`relative overflow-hidden rounded-2xl p-4 sm:p-6 bg-gradient-to-br ${style.gradient} ring-1 ${style.ring} shadow-lg hover:shadow-2xl transition-shadow duration-500 h-full min-h-[150px] sm:min-h-[180px] flex flex-col justify-between`}
                 >
                   {/* Decorative organic blobs */}
                   <div

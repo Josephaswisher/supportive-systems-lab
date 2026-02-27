@@ -127,7 +127,7 @@ export function ContactForm() {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-gradient-to-r from-terracotta to-terracotta-dark hover:from-terracotta-dark hover:to-terracotta text-white rounded-xl py-6 text-base font-semibold btn-glow-terracotta"
+        className="w-full bg-gradient-to-r from-terracotta to-terracotta-dark hover:from-terracotta-dark hover:to-terracotta text-white rounded-xl py-4 sm:py-6 text-sm sm:text-base font-semibold btn-glow-terracotta"
       >
         {isSubmitting ? (
           "Sending message..."

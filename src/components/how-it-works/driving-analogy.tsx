@@ -17,11 +17,11 @@ export function DrivingAnalogy() {
           >
             <Quote className="w-12 h-12 text-teal/40 mx-auto mb-6" />
           </motion.div>
-          <blockquote className="font-serif text-2xl md:text-3xl text-white leading-snug mb-6">
+          <blockquote className="font-serif text-xl sm:text-2xl md:text-3xl text-white leading-snug mb-6">
             &ldquo;Teams do not need to memorize policy manuals mid-crisis. They need
             clear guidance in the moment, and systems that back it up.&rdquo;
           </blockquote>
-          <p className="text-white/85 text-lg leading-relaxed mb-8">
+          <p className="text-white/85 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
             That is why we pair robust SOP architecture with practical frontline
             tools: forms, checklists, and quick references designed for real
             service environments.

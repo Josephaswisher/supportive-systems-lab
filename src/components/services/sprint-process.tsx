@@ -44,7 +44,7 @@ export function SprintProcess() {
         subtitle="Focused engagements built for measurable momentum and durable adoption."
       />
 
-      <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
         {steps.map((step, idx) => (
           <motion.div key={step.title} variants={fadeUpVariants}>
             <div className="relative text-center">
@@ -72,13 +72,13 @@ export function SprintProcess() {
 
       {/* Pricing callout */}
       <FadeIn>
-        <div className="bg-navy-dark rounded-2xl p-8 md:p-10 text-center grain-overlay relative overflow-hidden shadow-[0_8px_40px_rgba(15,36,56,0.5)]">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-teal/[0.06] rounded-full blur-[80px] pointer-events-none" />
+        <div className="bg-navy-dark rounded-2xl p-5 sm:p-8 md:p-10 text-center grain-overlay relative overflow-hidden shadow-[0_8px_40px_rgba(15,36,56,0.5)]">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[120px] sm:w-[400px] sm:h-[200px] bg-teal/[0.06] rounded-full blur-[80px] pointer-events-none" />
           <div className="relative z-10">
-            <p className="font-serif text-2xl md:text-3xl text-white mb-3">
+            <p className="font-serif text-xl sm:text-2xl md:text-3xl text-white mb-3">
               Legacy models often spend six months describing problems.
             </p>
-            <p className="text-teal-light text-lg">
+            <p className="text-teal-light text-base sm:text-lg">
               We use one focused sprint to build systems teams can run with the
               next day.
             </p>

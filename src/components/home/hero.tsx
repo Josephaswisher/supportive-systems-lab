@@ -18,12 +18,12 @@ export function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
 
       {/* Radial glow behind headline */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-teal/[0.06] blur-[140px] pointer-events-none" />
-      <div className="absolute top-[40%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-terracotta/[0.04] blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] rounded-full bg-teal/[0.06] blur-[140px] pointer-events-none" />
+      <div className="absolute top-[40%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-terracotta/[0.04] blur-[100px] pointer-events-none" />
 
       {/* Organic blob decorations — animated drift */}
       <motion.svg
-        className="absolute top-20 -left-32 w-96 h-96 opacity-10"
+        className="absolute top-20 -left-32 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 opacity-10"
         viewBox="0 0 200 200"
         animate={{ x: [0, 15, 0], y: [0, -10, 0], rotate: [0, 5, 0] }}
         transition={{ repeat: Infinity, duration: 20, ease: "easeInOut" }}
@@ -35,7 +35,7 @@ export function Hero() {
         />
       </motion.svg>
       <motion.svg
-        className="absolute bottom-20 -right-20 w-80 h-80 opacity-[0.08]"
+        className="absolute bottom-20 -right-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 opacity-[0.08]"
         viewBox="0 0 200 200"
         animate={{ x: [0, -12, 0], y: [0, 8, 0], rotate: [0, -4, 0] }}
         transition={{ repeat: Infinity, duration: 18, ease: "easeInOut" }}
@@ -51,14 +51,14 @@ export function Hero() {
       <div className="absolute inset-0 opacity-[0.04] bg-[url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20256%20256%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22noise%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.9%22%20numOctaves%3D%224%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url(%23noise)%22%2F%3E%3C%2Fsvg%3E')] bg-repeat bg-[length:256px_256px] pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-8 md:pt-10 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-8 md:pt-10 text-center">
         <motion.div
           variants={heroVariants}
           initial="hidden"
           animate="visible"
           className="mb-6"
         >
-          <span className="inline-flex items-center text-white text-sm uppercase tracking-[0.25em] font-semibold mb-6 eyebrow-dash drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] bg-white/10 ring-1 ring-white/25 rounded-full px-4 py-1.5">
+          <span className="inline-flex items-center text-white text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] font-semibold mb-6 eyebrow-dash drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] bg-white/10 ring-1 ring-white/25 rounded-full px-3 sm:px-4 py-1.5">
             Nonprofit Operations Architecture
           </span>
         </motion.div>
@@ -80,7 +80,7 @@ export function Hero() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.35 }}
-          className="mt-8 text-lg md:text-xl text-white/95 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty] drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)]"
+          className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-white/95 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty] drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)]"
         >
           We design the systems, rituals, and decision pathways that keep
           nonprofits steady under pressure, so your team can focus on people and
@@ -92,12 +92,12 @@ export function Hero() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.55 }}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto bg-white/5 ring-1 ring-white/15 rounded-2xl p-3 sm:p-4 backdrop-blur-sm"
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto bg-white/5 ring-1 ring-white/15 rounded-2xl p-3 sm:p-4 backdrop-blur-sm"
         >
           <Button
             asChild
             size="lg"
-            className="w-full sm:w-auto bg-terracotta hover:bg-terracotta-dark text-white rounded-xl px-8 py-6 text-base font-semibold btn-glow-terracotta ring-1 ring-white/20"
+            className="w-full sm:w-auto bg-terracotta hover:bg-terracotta-dark text-white rounded-xl px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-semibold btn-glow-terracotta ring-1 ring-white/20"
           >
             <Link href="/contact">
               Book a Discovery Call{" "}
@@ -108,7 +108,7 @@ export function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="w-full sm:w-auto border-2 border-white/65 text-white hover:bg-white/16 hover:border-white rounded-xl px-8 py-6 text-base bg-white/5 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+            className="w-full sm:w-auto border-2 border-white/65 text-white hover:bg-white/16 hover:border-white rounded-xl px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base bg-white/5 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
           >
             <Link href="/services">Explore Services</Link>
           </Button>

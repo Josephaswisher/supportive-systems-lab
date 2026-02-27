@@ -9,10 +9,10 @@ import { ContactForm } from "./contact-form";
 export function ContactSection() {
   return (
     <SectionWrapper bg="white">
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-16">
         {/* Form — left side */}
         <FadeIn className="lg:col-span-3">
-          <div className="bg-white rounded-2xl p-8 md:p-10 border border-fog shadow-sm hover:shadow-md hover:border-teal/20 transition-all duration-300">
+          <div className="bg-white rounded-2xl p-5 sm:p-8 md:p-10 border border-fog shadow-sm hover:shadow-md hover:border-teal/20 transition-all duration-300">
             <h2 className="font-serif text-2xl text-navy mb-2">
               Tell us what needs fixing first
             </h2>
@@ -27,7 +27,7 @@ export function ContactSection() {
         {/* Info — right side */}
         <FadeIn delay={0.2} className="lg:col-span-2 space-y-6">
           {/* Calendly Card */}
-          <div className="bg-cloud rounded-2xl p-8 border border-fog border-top-teal hover:shadow-md transition-all duration-300">
+          <div className="bg-cloud rounded-2xl p-5 sm:p-8 border border-fog border-top-teal hover:shadow-md transition-all duration-300">
             <div className="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center mb-4">
               <Calendar className="w-6 h-6 text-teal" />
             </div>
@@ -46,7 +46,7 @@ export function ContactSection() {
           </div>
 
           {/* Contact info */}
-          <div className="bg-cloud rounded-2xl p-8 border border-fog hover:shadow-md hover:border-fog/80 transition-all duration-300">
+          <div className="bg-cloud rounded-2xl p-5 sm:p-8 border border-fog hover:shadow-md hover:border-fog/80 transition-all duration-300">
             <h3 className="font-serif text-lg text-navy mb-4">
               Direct Contact Details
             </h3>

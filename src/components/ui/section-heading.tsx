@@ -16,11 +16,11 @@ export function SectionHeading({
   light = false,
 }: SectionHeadingProps) {
   return (
-    <div className={cn(centered && "text-center", "mb-12 md:mb-16")}>
+    <div className={cn(centered && "text-center", "mb-8 sm:mb-12 md:mb-16")}>
       {eyebrow && (
         <span
           className={cn(
-            "text-sm font-medium uppercase tracking-[0.2em] eyebrow-dash",
+            "text-xs sm:text-sm font-medium uppercase tracking-[0.15em] sm:tracking-[0.2em] eyebrow-dash",
             light ? "text-teal-light" : "text-teal"
           )}
         >
@@ -29,7 +29,7 @@ export function SectionHeading({
       )}
       <h2
         className={cn(
-          "text-3xl md:text-4xl lg:text-[2.75rem] font-serif mt-2 leading-tight [text-wrap:balance] heading-tight",
+          "text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-serif mt-2 leading-tight [text-wrap:balance] heading-tight",
           light ? "text-white" : "text-navy"
         )}
       >
@@ -38,7 +38,7 @@ export function SectionHeading({
       {subtitle && (
         <p
           className={cn(
-            "mt-4 text-lg max-w-2xl leading-relaxed [text-wrap:pretty]",
+            "mt-3 sm:mt-4 text-base sm:text-lg max-w-2xl leading-relaxed [text-wrap:pretty]",
             centered && "mx-auto",
             light ? "text-white/92" : "text-slate-brand"
           )}
