@@ -30,7 +30,7 @@ export function StatsBanner() {
           </div>
         ))}
       </div>
-      <p className="text-center text-white/40 text-sm mt-12">
+      <p className="text-center text-white/75 text-sm mt-12">
         Based on results from the Kings Ridge affordable housing case study
       </p>
     </SectionWrapper>

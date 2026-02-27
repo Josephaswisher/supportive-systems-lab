@@ -20,10 +20,10 @@ export function Footer() {
               </div>
               <span className="font-serif text-lg text-white">SSL</span>
             </div>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <p className="text-white/90 text-sm leading-relaxed">
               Heart. Head. Backbone.
             </p>
-            <p className="text-white/65 text-sm mt-2 leading-relaxed">
+            <p className="text-white/85 text-sm mt-2 leading-relaxed">
               Building the operational infrastructure that helps nonprofit
               missions endure and expand their impact.
             </p>
@@ -39,7 +39,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-white/80 hover:text-white text-sm transition-all duration-200 hover:translate-x-1"
+                    className="text-white/90 hover:text-white text-sm transition-all duration-200 hover:translate-x-1"
                   >
                     {item.label}
                   </Link>
@@ -57,7 +57,7 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:supsyslab@outlook.com"
-                  className="text-white/80 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="text-white/90 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <Mail className="w-4 h-4" />
                   supsyslab@outlook.com
@@ -66,7 +66,7 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+19195551234"
-                  className="text-white/80 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="text-white/90 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <Phone className="w-4 h-4" />
                   (919) 555-1234
@@ -77,7 +77,7 @@ export function Footer() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="text-white/90 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
@@ -91,7 +91,7 @@ export function Footer() {
             <h4 className="font-serif text-sm uppercase tracking-widest text-teal-light mb-4">
               Ready to Begin?
             </h4>
-            <p className="text-white/75 text-sm mb-4">
+            <p className="text-white/90 text-sm mb-4">
               Book a discovery conversation and we will identify your highest
               leverage operational next step.
             </p>
@@ -107,11 +107,11 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/70 text-sm">
+          <p className="text-white/85 text-sm">
             &copy; {new Date().getFullYear()} Supportive Systems Lab. All rights
             reserved.
           </p>
-          <p className="text-white/55 text-xs">
+          <p className="text-white/80 text-xs">
             Triangle, NC &middot; Supporting nonprofits across the region and beyond
           </p>
         </div>

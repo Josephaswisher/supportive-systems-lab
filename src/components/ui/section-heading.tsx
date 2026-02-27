@@ -40,7 +40,7 @@ export function SectionHeading({
           className={cn(
             "mt-4 text-lg max-w-2xl leading-relaxed [text-wrap:pretty]",
             centered && "mx-auto",
-            light ? "text-white/82" : "text-slate-brand"
+            light ? "text-white/92" : "text-slate-brand"
           )}
         >
           {subtitle}

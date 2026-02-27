@@ -40,7 +40,7 @@ export function ContactSection() {
             <Button className="w-full bg-terracotta hover:bg-terracotta-dark text-white rounded-xl">
               Book Discovery Call
             </Button>
-            <p className="text-slate-brand/50 text-xs mt-2 text-center">
+            <p className="text-slate-brand/75 text-xs mt-2 text-center">
               Scheduling link coming soon
             </p>
           </div>

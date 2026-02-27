@@ -24,7 +24,7 @@ export function FutureStudies() {
               <p className="text-slate-brand text-sm font-medium">
                 Next Case Study In Progress
               </p>
-              <p className="text-slate-brand/50 text-xs mt-2">
+              <p className="text-slate-brand/75 text-xs mt-2">
                 Your organization could be featured next
               </p>
             </div>

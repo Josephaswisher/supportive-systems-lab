@@ -29,7 +29,7 @@ export function Hero() {
         transition={{ repeat: Infinity, duration: 20, ease: "easeInOut" }}
       >
         <path
-          fill="#2A9D8F"
+          fill="#1A7A6D"
           d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.6,-0.8C87.2,14.6,81.8,29.2,73.1,41.2C64.4,53.2,52.4,62.6,39.1,70.2C25.8,77.8,12.9,83.5,-1.4,85.9C-15.7,88.3,-31.4,87.4,-44.6,80.6C-57.8,73.8,-68.5,61.1,-75.8,46.8C-83.1,32.5,-87,16.2,-86.4,0.3C-85.9,-15.6,-80.9,-31.2,-72.4,-43.8C-63.9,-56.4,-51.9,-66,-38.8,-73.8C-25.7,-81.6,-12.8,-87.6,1.3,-89.8C15.5,-92,30.6,-83.6,44.7,-76.4Z"
           transform="translate(100 100)"
         />
@@ -80,7 +80,7 @@ export function Hero() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.35 }}
-          className="mt-8 text-lg md:text-xl text-white/92 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty] drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)]"
+          className="mt-8 text-lg md:text-xl text-white/95 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty] drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)]"
         >
           We design the systems, rituals, and decision pathways that keep
           nonprofits steady under pressure, so your team can focus on people and
@@ -119,7 +119,7 @@ export function Hero() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.72 }}
-          className="mt-5 text-sm text-white/75"
+          className="mt-5 text-sm text-white/90"
         >
           Trusted by mission-driven teams building durable impact.
         </motion.p>
@@ -139,9 +139,9 @@ export function Hero() {
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
       >
-        <span className="text-[11px] tracking-[0.2em] uppercase text-white/60">Scroll</span>
+        <span className="text-[11px] tracking-[0.2em] uppercase text-white/80">Scroll</span>
         <div className="rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1.5">
-          <ChevronDown className="w-5 h-5 text-white/70" />
+          <ChevronDown className="w-5 h-5 text-white/85" />
         </div>
       </motion.div>
     </section>

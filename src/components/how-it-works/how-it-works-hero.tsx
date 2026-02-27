@@ -34,7 +34,7 @@ export function HowItWorksHero() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.3 }}
-          className="mt-6 text-white/85 text-lg font-medium max-w-2xl mx-auto"
+          className="mt-6 text-white/95 text-lg font-medium max-w-2xl mx-auto"
         >
           Three clear phases. One focused sprint. Systems teams can sustain.
         </motion.p>

@@ -60,7 +60,7 @@ export function ContactForm() {
           id="name"
           type="text"
           {...register("name")}
-          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow"
+          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/60 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow"
           placeholder="Your full name"
         />
         {errors.name && (
@@ -79,7 +79,7 @@ export function ContactForm() {
           id="email"
           type="email"
           {...register("email")}
-          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow"
+          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/60 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow"
           placeholder="name@organization.org"
         />
         {errors.email && (
@@ -98,7 +98,7 @@ export function ContactForm() {
           id="organization"
           type="text"
           {...register("organization")}
-          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow"
+          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/60 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow"
           placeholder="Your organization"
         />
       </div>
@@ -114,7 +114,7 @@ export function ContactForm() {
           id="message"
           rows={5}
           {...register("message")}
-          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/60 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow resize-none"
           placeholder="Share the bottleneck, who it affects, and what outcome you need..."
         />
         {errors.message && (

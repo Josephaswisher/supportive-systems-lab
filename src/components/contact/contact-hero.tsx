@@ -17,7 +17,7 @@ export function ContactHero() {
           variants={heroVariants}
           initial="hidden"
           animate="visible"
-          className="inline-block text-white/90 text-sm uppercase tracking-[0.25em] font-semibold mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
+          className="inline-block text-white text-sm uppercase tracking-[0.25em] font-semibold mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
         >
           Get In Touch
         </motion.span>
@@ -35,7 +35,7 @@ export function ContactHero() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.3 }}
-          className="mt-6 text-white/92 text-lg font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]"
+          className="mt-6 text-white/95 text-lg font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]"
         >
           Book a discovery call or send a note about your current operational
           challenges. We will meet you with practical next steps.

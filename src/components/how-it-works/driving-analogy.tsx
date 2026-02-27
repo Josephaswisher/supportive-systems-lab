@@ -21,7 +21,7 @@ export function DrivingAnalogy() {
             &ldquo;Teams do not need to memorize policy manuals mid-crisis. They need
             clear guidance in the moment, and systems that back it up.&rdquo;
           </blockquote>
-          <p className="text-white/60 text-lg leading-relaxed mb-8">
+          <p className="text-white/85 text-lg leading-relaxed mb-8">
             That is why we pair robust SOP architecture with practical frontline
             tools: forms, checklists, and quick references designed for real
             service environments.
@@ -32,7 +32,7 @@ export function DrivingAnalogy() {
             </div>
             <div className="text-left">
               <p className="text-white font-medium text-sm">Chris Pearson</p>
-              <p className="text-white/40 text-xs">
+              <p className="text-white/75 text-xs">
                 Founder, Supportive Systems Lab
               </p>
             </div>

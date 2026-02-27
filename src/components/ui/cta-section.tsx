@@ -28,7 +28,7 @@ export function CTASection({
           <h2 className="text-3xl md:text-4xl font-serif text-white relative z-10 heading-tight">
             {heading}
           </h2>
-          <p className="mt-4 text-white/80 text-lg max-w-xl mx-auto relative z-10">
+          <p className="mt-4 text-white/95 text-lg max-w-xl mx-auto relative z-10">
             {subheading}
           </p>
           <Button

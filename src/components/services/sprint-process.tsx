@@ -82,7 +82,7 @@ export function SprintProcess() {
               We use one focused sprint to build systems teams can run with the
               next day.
             </p>
-            <p className="text-white/50 text-sm mt-4">
+            <p className="text-white/80 text-sm mt-4">
               Typical engagements begin around $5,000. Scope is tailored to
               your team size, urgency, and implementation needs.
             </p>

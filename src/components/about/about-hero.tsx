@@ -34,7 +34,7 @@ export function AboutHero() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.3 }}
-          className="mt-4 text-white/85 text-lg font-medium"
+          className="mt-4 text-white/95 text-lg font-medium"
         >
           Social Work Leadership &middot; Business Discipline &middot; Veteran
           Service &middot; Operational Execution

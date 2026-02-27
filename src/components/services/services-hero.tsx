@@ -17,7 +17,7 @@ export function ServicesHero() {
           variants={heroVariants}
           initial="hidden"
           animate="visible"
-          className="inline-block text-white/90 text-sm uppercase tracking-[0.25em] font-semibold mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
+          className="inline-block text-white text-sm uppercase tracking-[0.25em] font-semibold mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
         >
           What We Do
         </motion.span>
@@ -37,7 +37,7 @@ export function ServicesHero() {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.3 }}
-          className="mt-6 text-white/92 text-lg font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]"
+          className="mt-6 text-white/95 text-lg font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]"
         >
           We do not parachute in with abstract recommendations. We work beside
           your team to rebuild how work gets done day to day.
