@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 
 export const metadata: Metadata = {
   title: {
-    default: "Supportive Systems Lab | Nonprofit Operations Consulting",
+    default: "Supportive Systems Lab | Nonprofit Operations Architecture",
     template: "%s | Supportive Systems Lab",
   },
   description:
-    "We build the operations, procedures, and systems that keep nonprofits running — so you can focus on changing lives. Heart. Head. Backbone.",
+    "Supportive Systems Lab helps nonprofits build durable operational infrastructure through focused sprints that connect mission, management, and execution.",
   keywords: [
     "nonprofit consulting",
     "nonprofit operations",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Supportive Systems Lab",
     description:
-      "Nonprofit operations consulting. Heart. Head. Backbone.",
+      "Operational infrastructure for nonprofits: Heart. Head. Backbone.",
     type: "website",
     locale: "en_US",
     siteName: "Supportive Systems Lab",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Supportive Systems Lab",
     description:
-      "Nonprofit operations consulting. Heart. Head. Backbone.",
+      "Focused nonprofit operations consulting for systems that last.",
   },
 };
 
@@ -53,8 +54,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col">
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        <ScrollProgress />
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

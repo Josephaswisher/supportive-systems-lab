@@ -1,6 +1,6 @@
 "use client";
 
-import { Signpost, Map, FileCheck, BookOpen } from "lucide-react";
+import { Signpost, Map } from "lucide-react";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
@@ -16,15 +16,14 @@ export function RoadSignsSection() {
             Road Signs, Not Law Books
           </h2>
           <p className="text-slate-brand text-lg leading-relaxed mb-4">
-            Your staff don&apos;t need a 200-page manual while they&apos;re
-            helping a client. They need road signs — quick-reference tools for
-            in-the-moment decisions — paired with solid training that builds
-            competence over time.
+            Teams serving clients in real time do not need a 200-page policy
+            binder at their elbow. They need clear, practical cues they can use
+            instantly, backed by strong training.
           </p>
           <p className="text-slate-brand leading-relaxed">
-            You&apos;re not going to have a book of state driving laws in your
-            car while you&apos;re driving. But you do need the road signs, the
-            maps, and the cones.
+            Like driving, success depends on usable guidance in the moment:
+            road signs for action, maps for direction, and structure that keeps
+            everyone safe.
           </p>
         </FadeIn>
 
@@ -40,8 +39,8 @@ export function RoadSignsSection() {
                     Road Signs
                   </h3>
                   <p className="text-slate-brand text-sm leading-relaxed">
-                    Forms, checklists, templates, quick-reference guides — the
-                    tools staff use in real time while serving clients.
+                    Forms, checklists, templates, and quick references teams can
+                    use while serving clients under pressure.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-3">
                     {["Forms", "Checklists", "Templates", "Quick-ref guides"].map(
@@ -69,9 +68,8 @@ export function RoadSignsSection() {
                     The Map
                   </h3>
                   <p className="text-slate-brand text-sm leading-relaxed">
-                    SOPs, handbooks, onboarding programs, training curricula —
-                    the comprehensive systems underneath that make everything
-                    work.
+                    SOPs, handbooks, onboarding design, and training systems
+                    that create consistency behind day-to-day execution.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-3">
                     {["SOPs", "Handbooks", "Onboarding", "Training"].map(

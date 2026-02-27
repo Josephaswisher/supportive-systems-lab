@@ -9,7 +9,7 @@ export function CaseStudyNarrative() {
     <SectionWrapper bg="white">
       <div className="max-w-3xl mx-auto">
         <FadeIn>
-          <Badge className="bg-teal/10 text-teal border-0 mb-6">
+          <Badge className="bg-navy/10 text-navy border-0 mb-6 font-semibold">
             Kings Ridge Affordable Housing
           </Badge>
         </FadeIn>
@@ -20,14 +20,13 @@ export function CaseStudyNarrative() {
             <h2 className="font-serif text-2xl md:text-3xl text-navy mb-4">
               The Challenge
             </h2>
-            <p className="text-slate-brand text-lg leading-relaxed">
-              145 residents — including 52 children — exiting homelessness with
-              chronic health conditions, behavioral health needs, and complex
-              social situations. The staff was dedicated but overwhelmed, working
-              without standardized systems, clear communication channels, or
-              documented procedures. Critical observations fell through the
-              cracks. Emergency room visits that could have been prevented were
-              piling up.
+            <p className="text-navy/80 text-lg leading-relaxed">
+              Kings Ridge served 145 residents, including 52 children, many with
+              complex medical and social needs after homelessness. Staff were
+              committed but stretched across fragmented workflows, weak
+              communication pathways, and undocumented procedures. Critical
+              observations were easy to miss, and preventable emergency episodes
+              were escalating.
             </p>
           </div>
         </FadeIn>
@@ -43,39 +42,39 @@ export function CaseStudyNarrative() {
                 {
                   num: "01",
                   title: "Cross-Functional Team Meetings",
-                  desc: "Everyone from the custodian to the nurse to the case manager — in the same room, every week. Every role had visibility into every other role's observations.",
+                  desc: "Created structured weekly meetings where frontline, clinical, and administrative roles shared actionable observations in one operating rhythm.",
                 },
                 {
                   num: "02",
                   title: "Observation-to-Intervention Pipeline",
-                  desc: "Built a structured system where a front desk worker noticing a resident hobbling could trigger a clinical follow-up. Small observations preventing catastrophic cascades.",
+                  desc: "Built escalation pathways where frontline observations could trigger clinical follow-up before conditions became emergencies.",
                 },
                 {
                   num: "03",
                   title: "HIPAA-Compliant Information Sharing",
-                  desc: "Created protocols that allowed care-relevant observations to flow between roles without violating privacy regulations.",
+                  desc: "Established privacy-aligned information protocols that enabled safe, timely sharing of care-relevant signals.",
                 },
                 {
                   num: "04",
                   title: "On-Site Clinic Integration",
-                  desc: "Coordinated with the on-site health clinic to create proactive intervention workflows rather than reactive emergency responses.",
+                  desc: "Integrated on-site clinic coordination into daily operations to shift from reactive crisis response to proactive intervention.",
                 },
                 {
                   num: "05",
                   title: "Comprehensive SOPs & Training",
-                  desc: "Built incident reporting systems, staff onboarding procedures, and a collaborative care model that connected every role to the shared mission.",
+                  desc: "Implemented SOPs, incident pathways, onboarding standards, and training loops connecting every role to shared care outcomes.",
                 },
               ].map((item) => (
                 <div
                   key={item.num}
-                  className="flex gap-5 items-start"
+                  className="flex gap-5 items-start p-4 -mx-4 rounded-xl hover:bg-cloud/60 transition-colors duration-200"
                 >
-                  <span className="text-teal font-serif text-2xl shrink-0 w-10">
+                  <span className="text-gradient-teal font-serif text-2xl shrink-0 w-10 font-bold">
                     {item.num}
                   </span>
                   <div>
                     <h3 className="text-navy font-medium mb-1">{item.title}</h3>
-                    <p className="text-slate-brand text-sm leading-relaxed">
+                    <p className="text-navy/75 text-sm leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -87,25 +86,25 @@ export function CaseStudyNarrative() {
 
         {/* The Insight */}
         <FadeIn>
-          <div className="mb-12 bg-cloud rounded-2xl p-8 border border-fog">
+          <div className="mb-12 bg-cloud rounded-2xl p-8 border border-fog border-shimmer-ring">
             <h2 className="font-serif text-2xl text-navy mb-4">The Insight</h2>
-            <p className="text-slate-brand text-lg leading-relaxed">
-              When the front desk noticed a resident hobbling, that observation
-              reached the nurse through Chris&apos;s structured meeting process —
-              she could check if a PT session was missed. A simple observation.
-              A simple system. A prevented $50,000 emergency room visit.
+            <p className="text-navy/80 text-lg leading-relaxed">
+              Operational excellence in human services is often built on modest
+              signals captured early. One frontline observation, routed through a
+              reliable system, can prevent a major medical event and preserve
+              dignity for residents.
             </p>
           </div>
         </FadeIn>
 
         {/* Pull quote */}
         <FadeIn>
-          <blockquote className="border-l-4 border-teal pl-8 py-4 my-12">
+          <blockquote className="border-l-4 border-teal pl-8 py-4 my-12 rounded-r-xl hover:bg-teal/[0.03] transition-colors duration-300 quote-decorated relative">
             <p className="font-serif text-2xl md:text-3xl text-navy italic leading-snug">
-              &ldquo;You want all that stuff on autopilot so you can really
-              focus on the things that only humans can get done.&rdquo;
+              &ldquo;Put operations on autopilot so your people can spend their best
+              energy on the work only humans can do.&rdquo;
             </p>
-            <cite className="text-slate-brand text-sm mt-4 block not-italic">
+            <cite className="text-navy/70 text-sm mt-4 block not-italic">
               — Chris Pearson, Founder
             </cite>
           </blockquote>

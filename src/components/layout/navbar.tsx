@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -26,20 +26,29 @@ export function Navbar() {
         "fixed top-0 w-full z-50 transition-all duration-300",
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-fog"
-          : "bg-transparent"
+          : "bg-navy-dark/60 backdrop-blur-md border-b border-white/20 shadow-[0_10px_30px_rgba(3,12,24,0.35)]"
       )}
     >
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-navy flex items-center justify-center">
-            <span className="text-white font-serif text-lg font-bold">S</span>
-          </div>
+        <Link href="/" className="flex items-center gap-2 group logo-hover-effect">
+          <span
+            className={cn(
+              "font-serif text-2xl font-bold transition-colors rounded-lg px-2 py-0.5",
+              scrolled
+                ? "text-navy"
+                : "text-white bg-white/18 ring-1 ring-white/35 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]"
+            )}
+          >
+            S
+          </span>
           <div className="hidden sm:block">
             <span
               className={cn(
-                "font-serif text-lg transition-colors",
-                scrolled ? "text-navy" : "text-navy"
+                "font-serif text-lg transition-colors tracking-[0.01em]",
+                scrolled
+                  ? "text-navy"
+                  : "text-white font-bold drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]"
               )}
             >
               Supportive Systems Lab
@@ -54,24 +63,31 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors relative py-1",
+                "text-sm font-medium transition-colors relative py-1 px-2 rounded-md",
                 pathname === item.href
-                  ? "text-teal"
-                  : "text-navy/70 hover:text-navy"
+                  ? scrolled
+                    ? "text-teal"
+                    : "text-white bg-white/14 ring-1 ring-white/30"
+                  : scrolled
+                    ? "text-navy/70 hover:text-navy nav-link-slide"
+                    : "text-white hover:text-white nav-link-slide font-semibold drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]"
               )}
             >
               {item.label}
               {pathname === item.href && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-teal rounded-full" />
+                <span className="absolute bottom-0 left-1 right-1 h-0.5 bg-white rounded-full" />
               )}
             </Link>
           ))}
           <Button
             asChild
-            className="bg-terracotta hover:bg-terracotta-dark text-white rounded-xl px-6"
+            className={cn(
+              "bg-terracotta hover:bg-terracotta-dark text-white rounded-xl px-6 btn-glow-terracotta",
+              !scrolled && "ring-2 ring-white/45 shadow-[0_0_0_1px_rgba(255,255,255,0.2)]"
+            )}
           >
             <Link href="/contact">
-              Get Started <ArrowRight className="ml-2 w-4 h-4" />
+              Book Discovery <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </div>
@@ -79,7 +95,16 @@ export function Navbar() {
         {/* Mobile Hamburger */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="lg:hidden">
-            <Button variant="ghost" size="icon" className="text-navy">
+            <Button
+              variant="ghost"
+              size="icon"
+              className={cn(
+                "transition-colors",
+                scrolled
+                  ? "text-navy"
+                  : "text-white bg-white/12 ring-1 ring-white/28 hover:bg-white/16 hover:text-white rounded-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
+              )}
+            >
               <Menu className="w-6 h-6" />
               <span className="sr-only">Open menu</span>
             </Button>
@@ -112,10 +137,10 @@ export function Navbar() {
               <div className="mt-6 pt-6 border-t border-fog">
                 <Button
                   asChild
-                  className="w-full bg-terracotta hover:bg-terracotta-dark text-white rounded-xl py-6 text-lg"
+                  className="w-full bg-terracotta hover:bg-terracotta-dark text-white rounded-xl py-6 text-lg btn-glow-terracotta"
                 >
-                  <Link href="/contact" onClick={() => setOpen(false)}>
-                    Get Started <ArrowRight className="ml-2 w-5 h-5" />
+                    <Link href="/contact" onClick={() => setOpen(false)}>
+                    Book Discovery <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
               </div>

@@ -11,18 +11,18 @@ import { fadeUpVariants } from "@/lib/animations";
 const steps = [
   {
     icon: Phone,
-    title: "Free discovery call",
-    description: "Tell us what's keeping you up at night.",
+    title: "Discovery conversation",
+    description: "Name the operational bottleneck creating the most drag.",
   },
   {
     icon: Zap,
-    title: "One-month sprint (~$5K)",
-    description: "We diagnose, build, and deliver — fast.",
+    title: "Focused sprint",
+    description: "We diagnose, build, and operationalize quickly.",
   },
   {
     icon: CheckCircle,
-    title: "Systems that actually stick",
-    description: "We train your team and embed the change.",
+    title: "Embedded adoption",
+    description: "We reinforce team usage so change lasts.",
   },
 ];
 
@@ -31,8 +31,8 @@ export function HowItWorksTeaser() {
     <SectionWrapper bg="white">
       <SectionHeading
         eyebrow="Our Process"
-        title="Fast. Focused. Affordable."
-        subtitle="We work in targeted sprints — not six-month retainers."
+        title="Focused, practical, and built to last"
+        subtitle="We run targeted sprint engagements instead of long, low-velocity retainers."
       />
 
       <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -40,14 +40,14 @@ export function HowItWorksTeaser() {
           <motion.div
             key={step.title}
             variants={fadeUpVariants}
-            className="text-center"
+            className="text-center group"
           >
             <div className="relative">
-              <div className="w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-teal/15 group-hover:shadow-[0_0_20px_rgba(42,157,143,0.15)]">
                 <step.icon className="w-7 h-7 text-teal" />
               </div>
               {idx < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] border-t-2 border-dashed border-teal/20" />
+                <div className="hidden md:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] border-t-2 border-dashed border-teal/25" />
               )}
             </div>
             <h3 className="font-serif text-lg text-navy mb-2">{step.title}</h3>
@@ -59,9 +59,9 @@ export function HowItWorksTeaser() {
       <div className="text-center">
         <Link
           href="/how-it-works"
-          className="inline-flex items-center text-teal font-medium hover:underline underline-offset-4"
+          className="inline-flex items-center text-teal font-medium hover:gap-3 transition-all duration-300 underline-offset-4 hover:underline"
         >
-          See How It Works <ArrowRight className="ml-2 w-4 h-4" />
+          See the Full Process <ArrowRight className="ml-2 w-4 h-4" />
         </Link>
       </div>
     </SectionWrapper>

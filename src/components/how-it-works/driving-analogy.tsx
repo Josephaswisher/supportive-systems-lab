@@ -1,6 +1,7 @@
 "use client";
 
 import { Quote } from "lucide-react";
+import { motion } from "motion/react";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
@@ -9,19 +10,24 @@ export function DrivingAnalogy() {
     <SectionWrapper bg="navy-dark" grain>
       <FadeIn>
         <div className="max-w-3xl mx-auto text-center">
-          <Quote className="w-12 h-12 text-teal/40 mx-auto mb-6" />
+          <motion.div
+            animate={{ y: [0, -6, 0], rotate: [0, 3, 0] }}
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            className="inline-block"
+          >
+            <Quote className="w-12 h-12 text-teal/40 mx-auto mb-6" />
+          </motion.div>
           <blockquote className="font-serif text-2xl md:text-3xl text-white leading-snug mb-6">
-            &ldquo;You&apos;re not going to have a book of state driving laws in
-            your car while you&apos;re driving. But you do need the road signs,
-            the maps, and the cones.&rdquo;
+            &ldquo;Teams do not need to memorize policy manuals mid-crisis. They need
+            clear guidance in the moment, and systems that back it up.&rdquo;
           </blockquote>
           <p className="text-white/60 text-lg leading-relaxed mb-8">
-            Your staff don&apos;t need to read SOPs while serving clients — they
-            need forms, checklists, and quick-reference tools that guide them in
-            the moment.
+            That is why we pair robust SOP architecture with practical frontline
+            tools: forms, checklists, and quick references designed for real
+            service environments.
           </p>
           <div className="flex items-center justify-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-teal/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-teal/20 flex items-center justify-center pulse-glow-teal">
               <span className="text-teal font-serif text-sm">CP</span>
             </div>
             <div className="text-left">

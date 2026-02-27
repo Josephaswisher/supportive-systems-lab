@@ -39,8 +39,8 @@ export function ServiceAccordion() {
     <SectionWrapper bg="white">
       <SectionHeading
         eyebrow="Our Services"
-        title="Eight ways we strengthen your operations"
-        subtitle="Click any service to learn more about deliverables and ideal fit."
+        title="Eight ways we strengthen operational execution"
+        subtitle="Open each service to see where it fits, what gets delivered, and how adoption is supported."
       />
 
       <div className="max-w-3xl mx-auto">
@@ -51,12 +51,12 @@ export function ServiceAccordion() {
               <FadeIn key={service.id} delay={idx * 0.05}>
                 <AccordionItem
                   value={service.id}
-                  className="bg-white rounded-2xl border border-fog px-6 data-[state=open]:shadow-md transition-shadow"
+                  className="bg-white rounded-2xl border border-fog px-6 data-[state=open]:shadow-[0_8px_30px_rgba(42,157,143,0.1),0_0_0_1px_rgba(42,157,143,0.15)] data-[state=open]:border-teal/20 transition-all duration-300 hover:border-fog/80 data-[state=open]:border-l-[3px] data-[state=open]:border-l-teal"
                 >
-                  <AccordionTrigger className="text-left hover:no-underline py-5">
+                  <AccordionTrigger className="text-left hover:no-underline py-5 group/trigger">
                     <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center shrink-0">
-                        <Icon className="w-5 h-5 text-teal" />
+                      <div className="w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center shrink-0 transition-all duration-300 group-data-[state=open]/trigger:bg-teal group-data-[state=open]/trigger:shadow-[0_0_15px_rgba(42,157,143,0.3)]">
+                        <Icon className="w-5 h-5 text-teal transition-colors duration-300 group-data-[state=open]/trigger:text-white" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 flex-wrap">
@@ -65,7 +65,7 @@ export function ServiceAccordion() {
                           </h3>
                           {"isSecretSauce" in service && service.isSecretSauce && (
                             <Badge className="bg-terracotta/10 text-terracotta border-0 text-xs">
-                              Secret Sauce
+                              Adoption Advantage
                             </Badge>
                           )}
                         </div>
@@ -83,7 +83,7 @@ export function ServiceAccordion() {
 
                       <div>
                         <p className="text-navy font-medium text-sm mb-2">
-                          Deliverables:
+                          What you get:
                         </p>
                         <ul className="space-y-1.5">
                           {service.deliverables.map((d) => (
@@ -98,10 +98,10 @@ export function ServiceAccordion() {
                         </ul>
                       </div>
 
-                      <div className="bg-cloud rounded-xl p-4">
+                      <div className="bg-cloud rounded-xl p-4 border border-fog/50">
                         <p className="text-sm">
                           <span className="text-navy font-medium">
-                            Ideal for:{" "}
+                            Best fit:{" "}
                           </span>
                           <span className="text-slate-brand">
                             {service.idealFor}

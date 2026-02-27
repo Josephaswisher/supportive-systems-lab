@@ -8,12 +8,12 @@ import { Button } from "@/components/ui/button";
 import { Send, CheckCircle } from "lucide-react";
 
 const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email"),
+  name: z.string().min(2, "Please enter at least 2 characters for your name"),
+  email: z.string().email("Please enter a valid work email"),
   organization: z.string().optional(),
   message: z
     .string()
-    .min(10, "Please tell us a bit more (at least 10 characters)"),
+    .min(10, "Please share a little more detail (minimum 10 characters)"),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -39,9 +39,9 @@ export function ContactForm() {
     return (
       <div className="text-center py-12">
         <CheckCircle className="w-12 h-12 text-teal mx-auto mb-4" />
-        <h3 className="text-2xl font-serif text-navy mb-2">Thank you!</h3>
+        <h3 className="text-2xl font-serif text-navy mb-2">Message received</h3>
         <p className="text-slate-brand">
-          We&apos;ll be in touch within 48 hours.
+          Thank you for reaching out. We will follow up within 48 hours.
         </p>
       </div>
     );
@@ -54,13 +54,13 @@ export function ContactForm() {
           htmlFor="name"
           className="block text-sm font-medium text-navy mb-1.5"
         >
-          Name *
+          Full name *
         </label>
         <input
           id="name"
           type="text"
           {...register("name")}
-          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors"
+          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow"
           placeholder="Your full name"
         />
         {errors.name && (
@@ -73,14 +73,14 @@ export function ContactForm() {
           htmlFor="email"
           className="block text-sm font-medium text-navy mb-1.5"
         >
-          Email *
+          Work email *
         </label>
         <input
           id="email"
           type="email"
           {...register("email")}
-          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors"
-          placeholder="you@organization.org"
+          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow"
+          placeholder="name@organization.org"
         />
         {errors.email && (
           <p className="text-terracotta text-xs mt-1">{errors.email.message}</p>
@@ -92,14 +92,14 @@ export function ContactForm() {
           htmlFor="organization"
           className="block text-sm font-medium text-navy mb-1.5"
         >
-          Organization
+          Organization name
         </label>
         <input
           id="organization"
           type="text"
           {...register("organization")}
-          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors"
-          placeholder="Your organization's name"
+          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow"
+          placeholder="Your organization"
         />
       </div>
 
@@ -108,14 +108,14 @@ export function ContactForm() {
           htmlFor="message"
           className="block text-sm font-medium text-navy mb-1.5"
         >
-          What&apos;s your biggest challenge? *
+          What operational challenge is most urgent? *
         </label>
         <textarea
           id="message"
           rows={5}
           {...register("message")}
-          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors resize-none"
-          placeholder="Tell us about what's keeping you up at night..."
+          className="w-full px-4 py-3 rounded-xl border border-fog bg-cloud/50 text-navy placeholder:text-slate-brand/40 focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all duration-200 input-glow resize-none"
+          placeholder="Share the bottleneck, who it affects, and what outcome you need..."
         />
         {errors.message && (
           <p className="text-terracotta text-xs mt-1">
@@ -127,13 +127,13 @@ export function ContactForm() {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-terracotta hover:bg-terracotta-dark text-white rounded-xl py-6 text-base font-semibold"
+        className="w-full bg-gradient-to-r from-terracotta to-terracotta-dark hover:from-terracotta-dark hover:to-terracotta text-white rounded-xl py-6 text-base font-semibold btn-glow-terracotta"
       >
         {isSubmitting ? (
-          "Sending..."
+          "Sending message..."
         ) : (
           <>
-            Send Message <Send className="ml-2 w-4 h-4" />
+            Send Inquiry <Send className="ml-2 w-4 h-4" />
           </>
         )}
       </Button>

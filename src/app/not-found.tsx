@@ -10,18 +10,18 @@ export default function NotFound() {
           404
         </p>
         <h1 className="text-4xl md:text-5xl font-serif text-navy mb-4">
-          Page not found
+          This page could not be found
         </h1>
         <p className="text-slate-brand text-lg mb-8 max-w-md mx-auto">
-          The page you&apos;re looking for doesn&apos;t exist. Let&apos;s get
-          you back on track.
+          The link may be outdated or moved. Let&apos;s get you back to the
+          main experience.
         </p>
         <Button
           asChild
           className="bg-terracotta hover:bg-terracotta-dark text-white rounded-xl px-8"
         >
           <Link href="/">
-            <ArrowLeft className="mr-2 w-4 h-4" /> Back to Home
+            <ArrowLeft className="mr-2 w-4 h-4" /> Return Home
           </Link>
         </Button>
       </div>

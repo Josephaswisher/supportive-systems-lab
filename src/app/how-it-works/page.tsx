@@ -8,10 +8,10 @@ import { CTASection } from "@/components/ui/cta-section";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "Our three-step process: Discover, Build, Embed. Fast sprints that deliver tangible tools — not theoretical reports.",
+    "Our Discover-Build-Embed method turns nonprofit operational friction into practical systems teams can sustain.",
   openGraph: {
     title: "How It Works | Supportive Systems Lab",
-    description: "Discover, Build, Embed. Our three-step consulting process.",
+    description: "Discover, Build, Embed: a focused process for durable nonprofit operations.",
   },
 };
 
@@ -21,10 +21,11 @@ export default function HowItWorksPage() {
       <HowItWorksHero />
       <ProcessSteps />
       <DrivingAnalogy />
+      <div className="section-divider" />
       <DeliverablesTiers />
       <CTASection
-        heading="Ready to start the process?"
-        subheading="The first step is a free 30-minute discovery call."
+        heading="Start with one focused operational win"
+        subheading="The first step is a brief discovery call to identify your highest-leverage sprint scope."
       />
     </>
   );

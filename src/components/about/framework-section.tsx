@@ -13,11 +13,12 @@ const framework = [
     icon: Heart,
     color: "text-terracotta",
     bgColor: "bg-terracotta/10",
+    borderTop: "border-top-terracotta",
     items: [
-      "Trauma-informed approach to every engagement",
-      "Mission alignment at every decision point",
-      "People-centered system design",
-      "Cultural sensitivity and inclusivity",
+      "Trauma-informed engagement design",
+      "Mission alignment in daily decisions",
+      "People-centered systems architecture",
+      "Culturally responsive implementation",
     ],
   },
   {
@@ -25,11 +26,12 @@ const framework = [
     icon: Brain,
     color: "text-teal",
     bgColor: "bg-teal/10",
+    borderTop: "border-top-teal",
     items: [
-      "Financial strategy and ROI analysis",
-      "Data-driven outcome measurement",
-      "Sustainable growth planning",
-      "Risk assessment and mitigation",
+      "Financial strategy and operational economics",
+      "Outcome measurement and decision intelligence",
+      "Sustainable growth sequencing",
+      "Risk mapping and mitigation",
     ],
   },
   {
@@ -37,11 +39,12 @@ const framework = [
     icon: Landmark,
     color: "text-navy",
     bgColor: "bg-navy/10",
+    borderTop: "border-top-navy",
     items: [
-      "SOPs, handbooks, and documentation",
-      "Onboarding and training systems",
-      "Succession and knowledge transfer",
-      "Cross-functional communication structures",
+      "SOPs, handbooks, and practical tools",
+      "Onboarding and competency pathways",
+      "Succession and knowledge continuity",
+      "Cross-functional communication systems",
     ],
   },
 ];
@@ -51,8 +54,8 @@ export function FrameworkSection() {
     <SectionWrapper bg="cloud">
       <SectionHeading
         eyebrow="Our Framework"
-        title="The whole organization, integrated"
-        subtitle="Every engagement brings all three pillars together. Because you can't have one without the others."
+        title="A fully integrated operating model"
+        subtitle="Every engagement blends care, strategy, and execution because durable impact requires all three."
       />
 
       <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -60,10 +63,10 @@ export function FrameworkSection() {
           <motion.div
             key={pillar.title}
             variants={fadeUpVariants}
-            className="bg-white rounded-2xl p-8 border border-fog"
+            className={`bg-white rounded-2xl p-8 border border-fog ${pillar.borderTop} hover:shadow-lg hover:border-fog/80 transition-all duration-300 card-inner-glow`}
           >
             <div
-              className={`w-14 h-14 rounded-xl ${pillar.bgColor} flex items-center justify-center mb-5`}
+              className={`w-14 h-14 rounded-xl ${pillar.bgColor} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}
             >
               <pillar.icon className={`w-7 h-7 ${pillar.color}`} />
             </div>

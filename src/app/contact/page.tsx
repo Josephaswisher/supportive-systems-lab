@@ -6,10 +6,10 @@ import { FAQSection } from "@/components/contact/faq-section";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a free 30-minute consultation with Supportive Systems Lab. Let's talk about what operational infrastructure can do for your nonprofit.",
+    "Start a conversation with Supportive Systems Lab about building nonprofit systems your team can trust every day.",
   openGraph: {
     title: "Contact | Supportive Systems Lab",
-    description: "Book a free consultation. Let's build your backbone.",
+    description: "Book a discovery conversation and scope your first operational sprint.",
   },
 };
 

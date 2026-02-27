@@ -19,7 +19,7 @@ export function StatCounter({
 
   return (
     <div ref={ref} className="text-center">
-      <span className="text-5xl md:text-6xl font-serif text-white">
+      <span className="text-5xl md:text-6xl font-serif text-white stat-glow stat-glow-pulse">
         {prefix}
         {count.toLocaleString()}
         {suffix}

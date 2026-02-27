@@ -11,11 +11,11 @@ import { CTASection } from "@/components/ui/cta-section";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Operational assessments, SOP development, succession planning, team integration, and more. Focused ~1 month sprints starting at ~$5,000.",
+    "Operational assessments, documentation systems, adoption support, and team integration delivered through focused nonprofit sprints.",
   openGraph: {
     title: "Services | Supportive Systems Lab",
     description:
-      "Nonprofit operations consulting services. Fast sprints, lasting results.",
+      "Nonprofit operations services designed for fast traction and long-term durability.",
   },
 };
 
@@ -24,15 +24,18 @@ export default function ServicesPage() {
     <>
       <ServicesHero />
       <ComparisonCallout />
+      <div className="section-divider" />
       <SprintProcess />
       <RoadSignsSection />
+      <div className="section-divider" />
       <ServiceAccordion />
       <SecretSauceCallout />
+      <div className="section-divider" />
       <ComparisonTable />
       <CTASection
-        heading="Ready to get started?"
-        subheading="Book a free discovery call and tell us what's keeping you up at night."
-        buttonText="Book a Free Consultation"
+        heading="Ready to move from chaos to clarity?"
+        subheading="Bring your highest-friction bottleneck and we will scope the first sprint around it."
+        buttonText="Book Your Discovery Call"
       />
     </>
   );

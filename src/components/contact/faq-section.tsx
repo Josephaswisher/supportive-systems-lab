@@ -16,8 +16,8 @@ export function FAQSection() {
     <SectionWrapper bg="cloud">
       <SectionHeading
         eyebrow="FAQ"
-        title="Common questions"
-        subtitle="Quick answers to help you decide if we're the right fit."
+        title="Common planning questions"
+        subtitle="Clear answers to help your team decide quickly and confidently."
       />
 
       <FadeIn>
@@ -27,7 +27,7 @@ export function FAQSection() {
               <AccordionItem
                 key={idx}
                 value={`faq-${idx}`}
-                className="bg-white rounded-xl border border-fog px-6"
+                className="bg-white rounded-xl border border-fog px-6 faq-item transition-all duration-300 data-[state=open]:shadow-[0_4px_20px_rgba(42,157,143,0.08)]"
               >
                 <AccordionTrigger className="text-left hover:no-underline py-5">
                   <span className="font-serif text-lg text-navy">

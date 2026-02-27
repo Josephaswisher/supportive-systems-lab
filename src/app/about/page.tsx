@@ -7,11 +7,11 @@ import { CTASection } from "@/components/ui/cta-section";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Chris Pearson, MSW — the founder of Supportive Systems Lab. Learn about the Heart, Head, Backbone framework that drives our nonprofit consulting.",
+    "Meet Chris Pearson, MSW, and the Heart-Head-Backbone framework behind Supportive Systems Lab's nonprofit operations model.",
   openGraph: {
     title: "About | Supportive Systems Lab",
     description:
-      "Meet Chris Pearson and learn about the Heart, Head, Backbone framework.",
+      "Meet the founder and framework behind a grounded, high-impact nonprofit operations practice.",
   },
 };
 
@@ -22,8 +22,8 @@ export default function AboutPage() {
       <FounderStory />
       <FrameworkSection />
       <CTASection
-        heading="Let's build something together"
-        subheading="Book a free consultation and see what operational infrastructure can do for your mission."
+        heading="Build the systems your mission can trust"
+        subheading="Start with a conversation about where operations are slowing your impact."
       />
     </>
   );

@@ -8,11 +8,11 @@ import { CTASection } from "@/components/ui/cta-section";
 export const metadata: Metadata = {
   title: "Impact",
   description:
-    "See how operational infrastructure saved $300K-$500K in emergency medical costs at a 145-unit affordable housing complex.",
+    "See how practical operating systems reduced avoidable emergency costs and improved care continuity at scale.",
   openGraph: {
     title: "Impact | Supportive Systems Lab",
     description:
-      "Real results: $300K-$500K saved through operational infrastructure.",
+      "Measured outcomes from nonprofit operations done right.",
   },
 };
 
@@ -22,10 +22,11 @@ export default function ImpactPage() {
       <ImpactHero />
       <CaseStudyNarrative />
       <ImpactStats />
+      <div className="section-divider" />
       <FutureStudies />
       <CTASection
-        heading="Your story could be next"
-        subheading="Let's talk about the impact operational infrastructure can have on your organization."
+        heading="Your next case study can start now"
+        subheading="Let us map where stronger operations can unlock measurable mission outcomes in your context."
       />
     </>
   );

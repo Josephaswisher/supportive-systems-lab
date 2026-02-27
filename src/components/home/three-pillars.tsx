@@ -14,18 +14,25 @@ const iconMap: Record<string, React.ElementType> = {
   Vertebrae: Landmark,
 };
 
+const pillarStyles = [
+  { iconBg: "bg-terracotta/10", iconText: "text-terracotta", glowShadow: "group-hover:shadow-[0_8px_40px_rgba(231,111,81,0.18),0_0_0_1px_rgba(231,111,81,0.08)]", topBorder: "border-top-terracotta" },
+  { iconBg: "bg-teal/10", iconText: "text-teal", glowShadow: "group-hover:shadow-[0_8px_40px_rgba(42,157,143,0.18),0_0_0_1px_rgba(42,157,143,0.08)]", topBorder: "border-top-teal" },
+  { iconBg: "bg-navy/10", iconText: "text-navy-light", glowShadow: "group-hover:shadow-[0_8px_40px_rgba(27,58,92,0.18),0_0_0_1px_rgba(27,58,92,0.08)]", topBorder: "border-top-navy" },
+];
+
 export function ThreePillars() {
   return (
     <SectionWrapper bg="white">
       <SectionHeading
         eyebrow="Our Approach"
         title="Heart. Head. Backbone."
-        subtitle="Three pillars that make nonprofit operations actually work."
+        subtitle="A three-part framework for humane, disciplined, and repeatable nonprofit execution."
       />
 
       <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {THREE_PILLARS.map((pillar) => {
+        {THREE_PILLARS.map((pillar, idx) => {
           const Icon = iconMap[pillar.icon] || Heart;
+          const style = pillarStyles[idx];
           return (
             <motion.div
               key={pillar.title}
@@ -33,13 +40,14 @@ export function ThreePillars() {
               whileHover="hover"
               initial="rest"
               animate="rest"
+              className="group"
             >
               <motion.div
                 variants={cardHoverVariants}
-                className="bg-white rounded-2xl p-8 md:p-10 border border-fog h-full cursor-default"
+                className={`bg-white rounded-2xl p-8 md:p-10 border border-fog h-full cursor-default transition-shadow duration-400 ${style.glowShadow} ${style.topBorder}`}
               >
-                <div className="w-16 h-16 rounded-2xl bg-teal/10 flex items-center justify-center mb-6">
-                  <Icon className="w-8 h-8 text-teal" />
+                <div className={`w-16 h-16 rounded-2xl ${style.iconBg} flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}>
+                  <Icon className={`w-8 h-8 ${style.iconText}`} />
                 </div>
                 <h3 className="font-serif text-xl text-navy mb-3">
                   {pillar.title}

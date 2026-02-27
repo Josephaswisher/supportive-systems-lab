@@ -7,11 +7,13 @@ import { StaggerContainer } from "@/components/ui/stagger-container";
 import { motion } from "motion/react";
 import { fadeUpVariants, cardHoverVariants } from "@/lib/animations";
 
+const tierColors = ["border-top-terracotta", "border-top-teal", "border-top-navy"];
+
 const tiers = [
   {
     title: "Assessment Tier",
     icon: Search,
-    description: "Understand where you stand",
+    description: "Diagnose where friction lives",
     items: [
       "Organizational health report",
       "Gap analysis across operations",
@@ -22,7 +24,7 @@ const tiers = [
   {
     title: "Build Tier",
     icon: Wrench,
-    description: "Create the tools you need",
+    description: "Build practical operating assets",
     items: [
       "Standard operating procedures",
       "Employee handbooks",
@@ -33,7 +35,7 @@ const tiers = [
   {
     title: "Adoption Tier",
     icon: Users,
-    description: "Make it stick",
+    description: "Reinforce and sustain change",
     items: [
       "Staff training and working sessions",
       "Leadership coaching and alignment",
@@ -48,18 +50,18 @@ export function DeliverablesTiers() {
     <SectionWrapper bg="cloud">
       <SectionHeading
         eyebrow="Deliverables"
-        title="What you actually get"
-        subtitle="Tangible tools and systems — not theoretical reports gathering dust."
+        title="What each sprint delivers"
+        subtitle="Concrete tools, implementation support, and adoption mechanisms your team can use immediately."
       />
 
       <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {tiers.map((tier) => (
+        {tiers.map((tier, idx) => (
           <motion.div key={tier.title} variants={fadeUpVariants}>
             <motion.div
               variants={cardHoverVariants}
               initial="rest"
               whileHover="hover"
-              className="bg-white rounded-2xl p-8 border border-fog h-full cursor-default"
+              className={`bg-white rounded-2xl p-8 border border-fog h-full cursor-default ${tierColors[idx]}`}
             >
               <div className="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5">
                 <tier.icon className="w-7 h-7 text-teal" />

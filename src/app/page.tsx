@@ -11,9 +11,12 @@ export default function HomePage() {
     <>
       <Hero />
       <ThreePillars />
+      <div className="section-divider" />
       <WhoWeHelp />
+      <div className="section-divider" />
       <HowItWorksTeaser />
       <StatsBanner />
+      <div className="section-divider" />
       <ValueProp />
       <CTASection />
     </>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
@@ -7,16 +8,23 @@ export function FounderStory() {
   return (
     <SectionWrapper bg="white">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
-        {/* Photo placeholder */}
+        {/* Headshot */}
         <FadeIn className="lg:col-span-2">
-          <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-navy to-teal-dark flex items-center justify-center relative overflow-hidden">
-            <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_70%,_#2A9D8F_0%,_transparent_50%)]" />
-            <span className="text-7xl font-serif text-white/90 relative z-10">
-              CP
-            </span>
+          <div className="aspect-[3/4] rounded-2xl overflow-hidden relative shadow-lg group/photo">
+            <Image
+              src="/images/chris-pearson.jpg"
+              alt="Chris Pearson — Founder, Supportive Systems Lab"
+              fill
+              className="object-cover object-top transition-transform duration-700 group-hover/photo:scale-105"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              priority
+            />
           </div>
-          <p className="text-center text-slate-brand text-sm mt-3 italic">
-            Photo coming soon
+          <p className="text-center text-navy font-medium text-sm mt-4">
+            Chris Pearson, MSW
+          </p>
+          <p className="text-center text-slate-brand text-xs">
+            Founder, Supportive Systems Lab
           </p>
         </FadeIn>
 
@@ -24,20 +32,16 @@ export function FounderStory() {
         <FadeIn className="lg:col-span-3 space-y-6">
           <div className="space-y-5 text-slate-brand text-lg leading-relaxed">
             <p>
-              Chris Pearson didn&apos;t start in consulting. He started in the
-              rooms — the apartments, the case management offices, the weekly
-              staff meetings where a custodian&apos;s observation about a
-              resident&apos;s gait could trigger a clinical intervention that
-              prevented a $50,000 hospital stay.
+              Chris Pearson did not start in conference rooms. He started in
+              apartments, care meetings, and frontline operations where tiny
+              observations could trigger life-changing interventions.
             </p>
 
             <p>
-              As Director of a 145-unit affordable housing complex serving
-              people exiting homelessness, Chris built the operational
-              infrastructure from scratch: cross-functional team meetings,
-              incident reporting systems, staff onboarding and training, and a
-              collaborative care model that connected every role in the building
-              to the shared mission.
+              As Director of a 145-unit affordable housing complex for people
+              exiting homelessness, he built operational infrastructure from the
+              ground up: cross-functional meeting cadence, reporting pathways,
+              onboarding systems, and role-based accountability.
             </p>
 
             <p>
@@ -45,9 +49,8 @@ export function FounderStory() {
               <strong className="text-navy">
                 $300,000–$500,000 in prevented emergency medical costs
               </strong>{" "}
-              in year one. Not from a fancy consultant&apos;s playbook — from
-              getting the right systems in place so good people could do good
-              work.
+              in year one. Not from abstract strategy decks, but from
+              disciplined systems that helped good teams deliver better care.
             </p>
 
             <p>
@@ -61,31 +64,31 @@ export function FounderStory() {
               <strong className="text-navy">
                 hands-on operational leadership
               </strong>{" "}
-              (the backbone). He&apos;s a veteran who brings discipline and
-              structure to every engagement.
+              (the backbone). As a veteran, he brings disciplined execution and
+              calm systems thinking to high-stakes nonprofit environments.
             </p>
 
             <p>
-              He founded Supportive Systems Lab because he saw too many small
-              nonprofits with great missions failing not from a lack of heart,
-              but from a lack of infrastructure.
+              He founded Supportive Systems Lab after seeing too many
+              mission-rich organizations lose momentum not from lack of care,
+              but from fragile operational design.
             </p>
           </div>
 
           {/* Pull quotes */}
           <div className="mt-8 space-y-6">
-            <blockquote className="border-l-4 border-teal pl-6 py-2">
-              <p className="font-serif text-xl text-navy italic">
+            <blockquote className="border-l-4 border-teal pl-8 py-4 rounded-r-xl hover:bg-teal/[0.03] transition-colors duration-300 quote-decorated relative">
+              <p className="font-serif text-xl text-navy italic leading-relaxed">
                 &ldquo;If you can&apos;t keep the lights on and doors open, your
-                mission dies.&rdquo;
+                mission cannot survive at the scale your community needs.&rdquo;
               </p>
             </blockquote>
 
-            <blockquote className="border-l-4 border-terracotta pl-6 py-2">
-              <p className="font-serif text-xl text-navy italic">
+            <blockquote className="border-l-4 border-terracotta pl-8 py-4 rounded-r-xl hover:bg-terracotta/[0.03] transition-colors duration-300 relative">
+              <span className="absolute top-0 left-2 font-serif text-6xl text-terracotta/10 leading-none pointer-events-none">&ldquo;</span>
+              <p className="font-serif text-xl text-navy italic leading-relaxed">
                 &ldquo;You can write the best standard operating procedure on
-                the planet, but if you can&apos;t get people to actually take it
-                up and run with it, that&apos;s the challenge.&rdquo;
+                paper, but until teams trust it and use it, nothing changes.&rdquo;
               </p>
             </blockquote>
           </div>
