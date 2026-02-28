@@ -652,10 +652,34 @@ function useChaosCounter(base: number) {
   return { count, ref };
 }
 
+function useWander() {
+  const [style, setStyle] = useState({ transform: "translate(0px, 0px) rotate(0deg)" });
+
+  useEffect(() => {
+    const drift = () => {
+      const x = (Math.random() - 0.5) * 60;
+      const y = (Math.random() - 0.5) * 60;
+      const r = (Math.random() - 0.5) * 15;
+      setStyle({ transform: `translate(${x}px, ${y}px) rotate(${r}deg)` });
+    };
+    const speed = 800 + Math.random() * 2000;
+    drift();
+    const interval = setInterval(drift, speed);
+    return () => clearInterval(interval);
+  }, []);
+
+  return style;
+}
+
 function MiniStat({ value, suffix, prefix, label }: { value: number; suffix: string; prefix: string; label: string }) {
   const { count, ref } = useChaosCounter(value);
+  const wanderStyle = useWander();
   return (
-    <div ref={ref} className="text-center py-1">
+    <div
+      ref={ref}
+      className="text-center py-1"
+      style={{ ...wanderStyle, transition: "transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1)" }}
+    >
       <span className="text-base sm:text-lg font-serif text-navy font-bold leading-none tabular-nums">
         {prefix}{count.toLocaleString()}{suffix}
       </span>
