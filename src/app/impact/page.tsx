@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ImpactHero } from "@/components/impact/impact-hero";
 import { CaseStudyNarrative } from "@/components/impact/case-study-narrative";
 import { ImpactStats } from "@/components/impact/impact-stats";
+import { StatsShowcase } from "@/components/impact/stats-showcase";
 import { FutureStudies } from "@/components/impact/future-studies";
 import { CTASection } from "@/components/ui/cta-section";
 
@@ -22,6 +23,7 @@ export default function ImpactPage() {
       <ImpactHero />
       <CaseStudyNarrative />
       <ImpactStats />
+      <StatsShowcase />
       <div className="section-divider" />
       <FutureStudies />
       <CTASection

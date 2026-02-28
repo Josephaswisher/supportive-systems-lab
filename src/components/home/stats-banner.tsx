@@ -2,7 +2,7 @@
 
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { StatCounter } from "@/components/ui/stat-counter";
-import { STATS } from "@/lib/constants";
+import { STATS_HERO } from "@/lib/constants";
 
 export function StatsBanner() {
   return (
@@ -19,7 +19,7 @@ export function StatsBanner() {
       <div className="floating-dot" style={{ top: "40%", left: "25%", animationDelay: "2s", width: "3px", height: "3px" }} />
       <div className="floating-dot" style={{ top: "50%", right: "22%", animationDelay: "3.5s", width: "3px", height: "3px" }} />
       <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 relative">
-        {STATS.map((stat) => (
+        {STATS_HERO.map((stat) => (
           <div key={stat.label} className="relative">
             <StatCounter
               value={stat.value}

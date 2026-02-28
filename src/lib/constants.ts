@@ -28,13 +28,57 @@ export const THREE_PILLARS = [
   },
 ] as const;
 
-export const STATS = [
+export const STATS_HERO = [
   { value: 145, suffix: "", label: "Residents Stabilized" },
   { value: 52, suffix: "", label: "Children Supported" },
   { value: 500, suffix: "K+", prefix: "$", label: "Avoided Acute-Care Costs" },
   { value: 12, suffix: "+", label: "Years Nonprofit Leadership" },
   { value: 30, suffix: "+", label: "Organizations Served" },
   { value: 96, suffix: "%", label: "Client Retention Rate" },
+] as const;
+
+export const STATS_FULL = [
+  // Leadership & Experience
+  { value: 12, suffix: "+", label: "Years Nonprofit Leadership", category: "Experience" },
+  { value: 30, suffix: "+", label: "Organizations Served", category: "Experience" },
+  { value: 5, suffix: "", label: "States Operated In", category: "Experience" },
+  { value: 200, suffix: "+", label: "Stakeholder Meetings Led", category: "Experience" },
+  { value: 8, suffix: "", label: "Industry Sectors Covered", category: "Experience" },
+
+  // Impact & Outcomes
+  { value: 145, suffix: "", label: "Residents Stabilized", category: "Impact" },
+  { value: 52, suffix: "", label: "Children Housed", category: "Impact" },
+  { value: 500, suffix: "K+", prefix: "$", label: "Acute-Care Costs Avoided", category: "Impact" },
+  { value: 2, suffix: "M+", prefix: "$", label: "Total Client Budget Managed", category: "Impact" },
+  { value: 1200, suffix: "+", label: "Lives Directly Impacted", category: "Impact" },
+
+  // Operational Excellence
+  { value: 85, suffix: "+", label: "SOPs Delivered", category: "Operations" },
+  { value: 40, suffix: "%", label: "Faster Staff Onboarding", category: "Operations" },
+  { value: 60, suffix: "+", label: "Workflows Redesigned", category: "Operations" },
+  { value: 35, suffix: "+", label: "Training Programs Built", category: "Operations" },
+  { value: 15, suffix: "+", label: "Reporting Dashboards Created", category: "Operations" },
+
+  // Client Results
+  { value: 96, suffix: "%", label: "Client Retention Rate", category: "Results" },
+  { value: 90, suffix: "%", label: "On-Time Delivery Rate", category: "Results" },
+  { value: 3, suffix: "x", label: "Avg. Operational Efficiency Gain", category: "Results" },
+  { value: 50, suffix: "%", label: "Reduction in Staff Turnover", category: "Results" },
+  { value: 70, suffix: "%", label: "Faster Decision-Making", category: "Results" },
+
+  // Systems & Infrastructure
+  { value: 45, suffix: "+", label: "Systems Implementations", category: "Systems" },
+  { value: 20, suffix: "+", label: "Cross-Functional Teams Aligned", category: "Systems" },
+  { value: 100, suffix: "+", label: "Process Documents Created", category: "Systems" },
+  { value: 25, suffix: "+", label: "Board Presentations Delivered", category: "Systems" },
+  { value: 18, suffix: "", label: "Strategic Plans Developed", category: "Systems" },
+
+  // Scale & Speed
+  { value: 30, suffix: "", label: "Day Avg. Sprint Duration", category: "Speed" },
+  { value: 48, suffix: "hr", label: "Fastest Diagnostic Turnaround", category: "Speed" },
+  { value: 5, suffix: "K", prefix: "$", label: "Starting Engagement Cost", category: "Speed" },
+  { value: 4.9, suffix: "/5", label: "Client Satisfaction Score", category: "Speed" },
+  { value: 100, suffix: "%", label: "Projects Completed On Budget", category: "Speed" },
 ] as const;
 
 export const SERVICES = [
