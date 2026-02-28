@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import { Send, CheckCircle } from "lucide-react";
+import { SendIcon, SuccessIcon } from "@/components/ui/icons";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Please enter at least 2 characters for your name"),
@@ -38,7 +38,7 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="text-center py-12">
-        <CheckCircle className="w-12 h-12 text-teal mx-auto mb-4" />
+        <SuccessIcon className="w-12 h-12 text-teal mx-auto mb-4" />
         <h3 className="text-2xl font-serif text-navy mb-2">Message received</h3>
         <p className="text-slate-brand">
           Thank you for reaching out. We will follow up within 48 hours.
@@ -133,7 +133,7 @@ export function ContactForm() {
           "Sending message..."
         ) : (
           <>
-            Send Inquiry <Send className="ml-2 w-4 h-4" />
+            Send Inquiry <SendIcon className="ml-2 w-4 h-4" />
           </>
         )}
       </Button>

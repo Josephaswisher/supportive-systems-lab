@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowIcon, ChevronDownIcon } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
 import { heroVariants } from "@/lib/animations";
@@ -116,7 +116,7 @@ export function Hero() {
           >
             <Link href="/contact">
               Book a Discovery Call{" "}
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowIcon className="ml-2 w-5 h-5" />
             </Link>
           </Button>
           <Button
@@ -156,7 +156,7 @@ export function Hero() {
       >
         <span className="text-[11px] tracking-[0.2em] uppercase text-white/80">Scroll</span>
         <div className="rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1.5">
-          <ChevronDown className="w-5 h-5 text-white/85" />
+          <ChevronDownIcon className="w-5 h-5 text-white/85" />
         </div>
       </motion.div>
     </section>

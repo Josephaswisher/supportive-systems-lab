@@ -1,6 +1,6 @@
 "use client";
 
-import { Heart, Brain, Landmark, Check } from "lucide-react";
+import { HeartIcon, BrainIcon, BackboneIcon, CheckIcon } from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerContainer } from "@/components/ui/stagger-container";
@@ -10,7 +10,7 @@ import { fadeUpVariants } from "@/lib/animations";
 const framework = [
   {
     title: "The Heart",
-    icon: Heart,
+    icon: HeartIcon,
     color: "text-terracotta",
     bgColor: "bg-terracotta/10",
     borderTop: "border-top-terracotta",
@@ -23,7 +23,7 @@ const framework = [
   },
   {
     title: "The Head",
-    icon: Brain,
+    icon: BrainIcon,
     color: "text-teal",
     bgColor: "bg-teal/10",
     borderTop: "border-top-teal",
@@ -36,7 +36,7 @@ const framework = [
   },
   {
     title: "The Backbone",
-    icon: Landmark,
+    icon: BackboneIcon,
     color: "text-navy",
     bgColor: "bg-navy/10",
     borderTop: "border-top-navy",
@@ -76,7 +76,7 @@ export function FrameworkSection() {
             <ul className="space-y-3">
               {pillar.items.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <Check className="w-4 h-4 text-teal mt-1 shrink-0" />
+                  <CheckIcon className="w-4 h-4 text-teal mt-1 shrink-0" />
                   <span className="text-slate-brand text-sm">{item}</span>
                 </li>
               ))}

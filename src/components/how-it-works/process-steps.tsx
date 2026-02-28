@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Wrench, Puzzle } from "lucide-react";
+import { DiscoverIcon, BuildIcon, EmbedIcon } from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerContainer } from "@/components/ui/stagger-container";
@@ -9,9 +9,9 @@ import { fadeUpVariants } from "@/lib/animations";
 import { PROCESS_STEPS } from "@/lib/constants";
 
 const iconMap: Record<string, React.ElementType> = {
-  Search,
-  Wrench,
-  Puzzle,
+  Search: DiscoverIcon,
+  Wrench: BuildIcon,
+  Puzzle: EmbedIcon,
 };
 
 export function ProcessSteps() {
@@ -25,7 +25,7 @@ export function ProcessSteps() {
 
       <StaggerContainer className="space-y-0">
         {PROCESS_STEPS.map((step, idx) => {
-          const Icon = iconMap[step.icon] || Search;
+          const Icon = iconMap[step.icon] || DiscoverIcon;
           return (
             <motion.div key={step.title} variants={fadeUpVariants}>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-center py-12">

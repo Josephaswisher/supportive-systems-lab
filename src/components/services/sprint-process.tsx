@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Zap, Handshake } from "lucide-react";
+import { PhoneIcon, SprintIcon, HandshakeIcon } from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerContainer } from "@/components/ui/stagger-container";
@@ -11,7 +11,7 @@ import { fadeUpVariants } from "@/lib/animations";
 const steps = [
   {
     num: "1",
-    icon: Phone,
+    icon: PhoneIcon,
     title: "Discovery Call",
     subtitle: "30 minutes",
     description:
@@ -19,7 +19,7 @@ const steps = [
   },
   {
     num: "2",
-    icon: Zap,
+    icon: SprintIcon,
     title: "Focused Sprint Build",
     subtitle: "~1 month, ~$5K",
     description:
@@ -27,7 +27,7 @@ const steps = [
   },
   {
     num: "3",
-    icon: Handshake,
+    icon: HandshakeIcon,
     title: "Adoption & Reinforcement",
     subtitle: "Adoption differentiator",
     description:

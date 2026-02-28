@@ -1,6 +1,6 @@
 "use client";
 
-import { UserX, BrainCog, BarChart3, Workflow } from "lucide-react";
+import { TurnoverIcon, FragmentedIcon, OutcomeGapsIcon, ChaosIcon } from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 import { StaggerContainer } from "@/components/ui/stagger-container";
@@ -10,7 +10,7 @@ import { PAIN_POINTS } from "@/lib/constants";
 
 const cardStyles = [
   {
-    icon: UserX,
+    icon: TurnoverIcon,
     gradient: "from-terracotta/90 via-terracotta/70 to-rose-500/60",
     accent: "text-white",
     iconBg: "bg-white/20",
@@ -19,7 +19,7 @@ const cardStyles = [
     ring: "ring-terracotta/30",
   },
   {
-    icon: BrainCog,
+    icon: FragmentedIcon,
     gradient: "from-navy via-navy/90 to-indigo-900/80",
     accent: "text-white",
     iconBg: "bg-white/15",
@@ -28,7 +28,7 @@ const cardStyles = [
     ring: "ring-navy/30",
   },
   {
-    icon: BarChart3,
+    icon: OutcomeGapsIcon,
     gradient: "from-teal via-teal/90 to-emerald-600/80",
     accent: "text-white",
     iconBg: "bg-white/20",
@@ -37,7 +37,7 @@ const cardStyles = [
     ring: "ring-teal/30",
   },
   {
-    icon: Workflow,
+    icon: ChaosIcon,
     gradient: "from-navy-dark via-charcoal to-navy/90",
     accent: "text-white",
     iconBg: "bg-terracotta/20",

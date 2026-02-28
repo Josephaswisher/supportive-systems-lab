@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles } from "lucide-react";
+import { SparkleIcon } from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
@@ -11,7 +11,7 @@ export function SecretSauceCallout() {
         <div className="max-w-3xl mx-auto border-l-4 border-terracotta bg-white rounded-xl p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden">
           <div className="absolute -top-8 -right-8 w-24 h-24 bg-terracotta/[0.04] rounded-full blur-2xl" />
           <div className="flex items-center gap-3 mb-4 relative z-10">
-            <Sparkles className="w-6 h-6 text-terracotta animate-pulse" />
+            <SparkleIcon className="w-6 h-6 text-terracotta animate-pulse" />
             <h3 className="font-serif text-2xl text-navy">
               The Differentiator: Delivery Plus Adoption
             </h3>

@@ -7,16 +7,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  ClipboardCheck,
-  FileText,
-  RefreshCcw,
-  GitBranch,
-  Users,
-  MessagesSquare,
-  BarChart3,
-  Sparkles,
-  Check,
-} from "lucide-react";
+  ClipboardIcon,
+  SOPIcon,
+  ChangeIcon,
+  SystemsIcon,
+  TeamIcon,
+  CommsIcon,
+  MetricsIcon,
+  SparkleIcon,
+  CheckIcon,
+} from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { FadeIn } from "@/components/ui/fade-in";
@@ -24,14 +24,14 @@ import { Badge } from "@/components/ui/badge";
 import { SERVICES } from "@/lib/constants";
 
 const iconMap: Record<string, React.ElementType> = {
-  ClipboardCheck,
-  FileText,
-  RefreshCcw,
-  GitBranch,
-  Users,
-  MessagesSquare,
-  BarChart3,
-  Sparkles,
+  ClipboardCheck: ClipboardIcon,
+  FileText: SOPIcon,
+  RefreshCcw: ChangeIcon,
+  GitBranch: SystemsIcon,
+  Users: TeamIcon,
+  MessagesSquare: CommsIcon,
+  BarChart3: MetricsIcon,
+  Sparkles: SparkleIcon,
 };
 
 export function ServiceAccordion() {
@@ -46,7 +46,7 @@ export function ServiceAccordion() {
       <div className="max-w-3xl mx-auto">
         <Accordion type="multiple" className="space-y-3">
           {SERVICES.map((service, idx) => {
-            const Icon = iconMap[service.icon] || ClipboardCheck;
+            const Icon = iconMap[service.icon] || ClipboardIcon;
             return (
               <FadeIn key={service.id} delay={idx * 0.05}>
                 <AccordionItem
@@ -91,7 +91,7 @@ export function ServiceAccordion() {
                               key={d}
                               className="flex items-start gap-2 text-sm text-slate-brand"
                             >
-                              <Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />
+                              <CheckIcon className="w-4 h-4 text-teal mt-0.5 shrink-0" />
                               {d}
                             </li>
                           ))}

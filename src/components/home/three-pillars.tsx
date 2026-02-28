@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Heart, Brain, Landmark } from "lucide-react";
+import { HeartIcon, BrainIcon, BackboneIcon } from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerContainer } from "@/components/ui/stagger-container";
@@ -9,9 +9,9 @@ import { fadeUpVariants, cardHoverVariants } from "@/lib/animations";
 import { THREE_PILLARS } from "@/lib/constants";
 
 const iconMap: Record<string, React.ElementType> = {
-  Heart,
-  Brain,
-  Vertebrae: Landmark,
+  Heart: HeartIcon,
+  Brain: BrainIcon,
+  Vertebrae: BackboneIcon,
 };
 
 const pillarStyles = [
@@ -31,7 +31,7 @@ export function ThreePillars() {
 
       <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {THREE_PILLARS.map((pillar, idx) => {
-          const Icon = iconMap[pillar.icon] || Heart;
+          const Icon = iconMap[pillar.icon] || HeartIcon;
           const style = pillarStyles[idx];
           return (
             <motion.div

@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Wrench, Users, Check } from "lucide-react";
+import { DiscoverIcon, BuildIcon, TeamIcon, CheckIcon } from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerContainer } from "@/components/ui/stagger-container";
@@ -12,7 +12,7 @@ const tierColors = ["border-top-terracotta", "border-top-teal", "border-top-navy
 const tiers = [
   {
     title: "Assessment Tier",
-    icon: Search,
+    icon: DiscoverIcon,
     description: "Diagnose where friction lives",
     items: [
       "Organizational health report",
@@ -23,7 +23,7 @@ const tiers = [
   },
   {
     title: "Build Tier",
-    icon: Wrench,
+    icon: BuildIcon,
     description: "Build practical operating assets",
     items: [
       "Standard operating procedures",
@@ -34,7 +34,7 @@ const tiers = [
   },
   {
     title: "Adoption Tier",
-    icon: Users,
+    icon: TeamIcon,
     description: "Reinforce and sustain change",
     items: [
       "Staff training and working sessions",
@@ -75,7 +75,7 @@ export function DeliverablesTiers() {
               <ul className="space-y-3">
                 {tier.items.map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />
+                    <CheckIcon className="w-4 h-4 text-teal mt-0.5 shrink-0" />
                     <span className="text-slate-brand text-sm">{item}</span>
                   </li>
                 ))}

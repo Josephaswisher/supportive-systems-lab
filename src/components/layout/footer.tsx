@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { NAV_ITEMS } from "@/lib/constants";
-import { Linkedin, Mail, Phone, ArrowRight } from "lucide-react";
+import { LinkedInIcon, MailIcon, PhoneCompactIcon, ArrowIcon } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
 
@@ -56,7 +56,7 @@ export function Footer() {
                   href="mailto:supsyslab@outlook.com"
                   className="text-white/90 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
-                  <Mail className="w-4 h-4" />
+                  <MailIcon className="w-4 h-4" />
                   supsyslab@outlook.com
                 </a>
               </li>
@@ -65,7 +65,7 @@ export function Footer() {
                   href="tel:+19195551234"
                   className="text-white/90 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
-                  <Phone className="w-4 h-4" />
+                  <PhoneCompactIcon className="w-4 h-4" />
                   (919) 555-1234
                 </a>
               </li>
@@ -76,7 +76,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-white/90 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <LinkedInIcon className="w-4 h-4" />
                   LinkedIn
                 </a>
               </li>
@@ -97,7 +97,7 @@ export function Footer() {
               className="bg-terracotta hover:bg-terracotta-dark text-white rounded-xl btn-glow-terracotta"
             >
               <Link href="/contact">
-                Book Discovery Call <ArrowRight className="ml-2 w-4 h-4" />
+                Book Discovery Call <ArrowIcon className="ml-2 w-4 h-4" />
               </Link>
             </Button>
           </div>

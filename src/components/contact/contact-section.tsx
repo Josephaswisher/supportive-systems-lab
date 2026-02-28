@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar, Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import { CalendarIcon, MailIcon, PhoneCompactIcon, LinkedInIcon, MapPinIcon } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { FadeIn } from "@/components/ui/fade-in";
@@ -29,7 +29,7 @@ export function ContactSection() {
           {/* Calendly Card */}
           <div className="bg-cloud rounded-2xl p-5 sm:p-8 border border-fog border-top-teal hover:shadow-md transition-all duration-300">
             <div className="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center mb-4">
-              <Calendar className="w-6 h-6 text-teal" />
+              <CalendarIcon className="w-6 h-6 text-teal" />
             </div>
             <h3 className="font-serif text-xl text-navy mb-2">
               Prefer to schedule right now?
@@ -56,7 +56,7 @@ export function ContactSection() {
                   href="mailto:supsyslab@outlook.com"
                   className="flex items-center gap-3 text-slate-brand hover:text-navy transition-colors text-sm"
                 >
-                  <Mail className="w-4 h-4 text-teal" />
+                  <MailIcon className="w-4 h-4 text-teal" />
                   supsyslab@outlook.com
                 </a>
               </li>
@@ -65,7 +65,7 @@ export function ContactSection() {
                   href="tel:+19195551234"
                   className="flex items-center gap-3 text-slate-brand hover:text-navy transition-colors text-sm"
                 >
-                  <Phone className="w-4 h-4 text-teal" />
+                  <PhoneCompactIcon className="w-4 h-4 text-teal" />
                   (919) 555-1234
                 </a>
               </li>
@@ -76,12 +76,12 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-slate-brand hover:text-navy transition-colors text-sm"
                 >
-                  <Linkedin className="w-4 h-4 text-teal" />
+                  <LinkedInIcon className="w-4 h-4 text-teal" />
                   LinkedIn
                 </a>
               </li>
               <li className="flex items-center gap-3 text-slate-brand text-sm">
-                <MapPin className="w-4 h-4 text-teal" />
+                <MapPinIcon className="w-4 h-4 text-teal" />
                 Triangle, NC
               </li>
             </ul>

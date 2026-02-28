@@ -1,6 +1,6 @@
 "use client";
 
-import { Quote } from "lucide-react";
+import { QuoteIcon } from "@/components/ui/icons";
 import { motion } from "motion/react";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { FadeIn } from "@/components/ui/fade-in";
@@ -15,7 +15,7 @@ export function DrivingAnalogy() {
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
             className="inline-block"
           >
-            <Quote className="w-12 h-12 text-teal/40 mx-auto mb-6" />
+            <QuoteIcon className="w-12 h-12 text-teal/40 mx-auto mb-6" />
           </motion.div>
           <blockquote className="font-serif text-xl sm:text-2xl md:text-3xl text-white leading-snug mb-6">
             &ldquo;Teams do not need to memorize policy manuals mid-crisis. They need

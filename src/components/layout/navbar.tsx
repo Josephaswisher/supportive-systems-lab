@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ArrowRight } from "lucide-react";
+import { MenuIcon, ArrowIcon } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
 import {
@@ -79,7 +79,7 @@ export function Navbar() {
             )}
           >
             <Link href="/contact">
-              Book Discovery <ArrowRight className="ml-2 w-4 h-4" />
+              Book Discovery <ArrowIcon className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </div>
@@ -97,7 +97,7 @@ export function Navbar() {
                   : "text-white bg-white/12 ring-1 ring-white/28 hover:bg-white/16 hover:text-white rounded-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
               )}
             >
-              <Menu className="w-6 h-6" />
+              <MenuIcon className="w-6 h-6" />
               <span className="sr-only">Open menu</span>
             </Button>
           </SheetTrigger>
@@ -133,7 +133,7 @@ export function Navbar() {
                   className="w-full bg-terracotta hover:bg-terracotta-dark text-white rounded-xl py-6 text-lg btn-glow-terracotta"
                 >
                     <Link href="/contact" onClick={() => setOpen(false)}>
-                    Book Discovery <ArrowRight className="ml-2 w-5 h-5" />
+                    Book Discovery <ArrowIcon className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
               </div>

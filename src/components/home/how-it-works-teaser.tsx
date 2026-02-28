@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Zap, CheckCircle, ArrowRight } from "lucide-react";
+import { PhoneIcon, SprintIcon, AdoptionIcon, ArrowIcon } from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerContainer } from "@/components/ui/stagger-container";
@@ -10,17 +10,17 @@ import { fadeUpVariants } from "@/lib/animations";
 
 const steps = [
   {
-    icon: Phone,
+    icon: PhoneIcon,
     title: "Discovery conversation",
     description: "Name the operational bottleneck creating the most drag.",
   },
   {
-    icon: Zap,
+    icon: SprintIcon,
     title: "Focused sprint",
     description: "We diagnose, build, and operationalize quickly.",
   },
   {
-    icon: CheckCircle,
+    icon: AdoptionIcon,
     title: "Embedded adoption",
     description: "We reinforce team usage so change lasts.",
   },
@@ -61,7 +61,7 @@ export function HowItWorksTeaser() {
           href="/how-it-works"
           className="inline-flex items-center text-teal font-medium hover:gap-3 transition-all duration-300 underline-offset-4 hover:underline"
         >
-          See the Full Process <ArrowRight className="ml-2 w-4 h-4" />
+          See the Full Process <ArrowIcon className="ml-2 w-4 h-4" />
         </Link>
       </div>
     </SectionWrapper>

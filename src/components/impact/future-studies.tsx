@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowIcon } from "@/components/ui/icons";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
@@ -39,7 +39,7 @@ export function FutureStudies() {
             className="bg-terracotta hover:bg-terracotta-dark text-white rounded-xl px-8"
           >
             <Link href="/contact">
-              Start Your Impact Story <ArrowRight className="ml-2 w-4 h-4" />
+              Start Your Impact Story <ArrowIcon className="ml-2 w-4 h-4" />
             </Link>
           </Button>
         </div>

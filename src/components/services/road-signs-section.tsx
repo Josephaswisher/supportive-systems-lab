@@ -1,6 +1,6 @@
 "use client";
 
-import { Signpost, Map } from "lucide-react";
+import { SignpostIcon, MapIcon } from "@/components/ui/icons";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { FadeIn } from "@/components/ui/fade-in";
 
@@ -32,7 +32,7 @@ export function RoadSignsSection() {
             <div className="bg-white rounded-2xl p-6 border border-fog">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-teal/10 flex items-center justify-center shrink-0">
-                  <Signpost className="w-6 h-6 text-teal" />
+                  <SignpostIcon className="w-6 h-6 text-teal" />
                 </div>
                 <div>
                   <h3 className="font-serif text-lg text-navy mb-2">
@@ -61,7 +61,7 @@ export function RoadSignsSection() {
             <div className="bg-white rounded-2xl p-6 border border-fog">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-navy/10 flex items-center justify-center shrink-0">
-                  <Map className="w-6 h-6 text-navy" />
+                  <MapIcon className="w-6 h-6 text-navy" />
                 </div>
                 <div>
                   <h3 className="font-serif text-lg text-navy mb-2">

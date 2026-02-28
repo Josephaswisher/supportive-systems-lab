@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeftIcon } from "@/components/ui/icons";
 
 export default function NotFound() {
   return (
@@ -21,7 +21,7 @@ export default function NotFound() {
           className="bg-terracotta hover:bg-terracotta-dark text-white rounded-xl px-8"
         >
           <Link href="/">
-            <ArrowLeft className="mr-2 w-4 h-4" /> Return Home
+            <ArrowLeftIcon className="mr-2 w-4 h-4" /> Return Home
           </Link>
         </Button>
       </div>

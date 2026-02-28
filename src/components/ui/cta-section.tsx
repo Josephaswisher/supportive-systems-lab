@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowIcon } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { FadeIn } from "@/components/ui/fade-in";
@@ -37,7 +37,7 @@ export function CTASection({
             className="mt-6 sm:mt-8 bg-white text-navy hover:bg-white/90 rounded-xl px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-semibold btn-glow-white relative z-10"
           >
             <Link href={buttonHref}>
-              {buttonText} <ArrowRight className="ml-2 w-5 h-5" />
+              {buttonText} <ArrowIcon className="ml-2 w-5 h-5" />
             </Link>
           </Button>
         </div>
