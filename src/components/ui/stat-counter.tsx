@@ -18,7 +18,7 @@ export function StatCounter({
   const { count, ref } = useCountUp({ end: value, duration: 2000 });
 
   return (
-    <div ref={ref} className="text-center">
+    <div ref={ref} className="text-center stat-halo">
       <span className="text-5xl md:text-6xl font-serif text-white stat-glow stat-glow-pulse">
         {prefix}
         {count.toLocaleString()}

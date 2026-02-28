@@ -21,10 +21,10 @@ export function FounderStory() {
             />
           </div>
           <p className="text-center text-navy font-medium text-sm mt-4">
-            Chris Pearson, MSW
+            Chris Pearson, MSW, MBA
           </p>
           <p className="text-center text-slate-brand text-xs">
-            Founder, Supportive Systems Lab
+            Founder & Principal, Supportive Systems Lab
           </p>
         </FadeIn>
 

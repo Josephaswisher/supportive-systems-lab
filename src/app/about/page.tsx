@@ -7,7 +7,7 @@ import { CTASection } from "@/components/ui/cta-section";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Chris Pearson, MSW, and the Heart-Head-Backbone framework behind Supportive Systems Lab's nonprofit operations model.",
+    "Meet Chris Pearson, MSW, MBA, and the Heart-Head-Backbone framework powering Supportive Systems Lab's nonprofit operations model.",
   openGraph: {
     title: "About | Supportive Systems Lab",
     description:

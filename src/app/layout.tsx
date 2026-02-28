@@ -53,11 +53,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col relative isolate">
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
         <ScrollProgress />
+        <div className="strobe-light" aria-hidden="true" />
         <Navbar />
         <main id="main-content" className="flex-1" tabIndex={-1}>
           {children}

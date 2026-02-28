@@ -20,7 +20,7 @@ export function Footer() {
               </div>
               <span className="font-serif text-lg text-white">SSL</span>
             </div>
-            <p className="text-white/80 text-sm leading-relaxed">
+            <p className="text-white/85 text-sm leading-relaxed">
               Heart. Head. Backbone.
             </p>
             <p className="text-white/65 text-sm mt-2 leading-relaxed">
@@ -39,7 +39,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-white/80 hover:text-white text-sm transition-all duration-200 hover:translate-x-1"
+                    className="text-white/80 hover:text-white text-sm transition-all duration-200 hover:translate-x-1 micro-tilt"
                   >
                     {item.label}
                   </Link>
@@ -57,7 +57,7 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:supsyslab@outlook.com"
-                  className="text-white/80 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="text-white/80 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1 micro-tilt"
                 >
                   <Mail className="w-4 h-4" />
                   supsyslab@outlook.com
@@ -66,7 +66,7 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+19195551234"
-                  className="text-white/80 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="text-white/80 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1 micro-tilt"
                 >
                   <Phone className="w-4 h-4" />
                   (919) 555-1234
@@ -77,7 +77,7 @@ export function Footer() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1"
+                  className="text-white/80 hover:text-white text-sm transition-all duration-200 flex items-center gap-2 hover:translate-x-1 micro-tilt"
                 >
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
@@ -87,7 +87,7 @@ export function Footer() {
           </div>
 
           {/* CTA */}
-          <div>
+          <div className="ambient-lift rounded-2xl p-5 bg-white/[0.03] ring-1 ring-white/10">
             <h4 className="font-serif text-sm uppercase tracking-widest text-teal-light mb-4">
               Ready to Begin?
             </h4>

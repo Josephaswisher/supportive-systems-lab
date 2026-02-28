@@ -31,7 +31,7 @@ export function ProcessSteps() {
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-center py-12">
                 {/* Step number + line */}
                 <div className="md:col-span-1 flex md:flex-col items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-teal text-white flex items-center justify-center font-serif text-2xl shrink-0 shadow-[0_0_20px_rgba(42,157,143,0.3)] pulse-glow-teal">
+                  <div className="w-16 h-16 rounded-full bg-teal text-white flex items-center justify-center font-serif text-2xl shrink-0 shadow-[0_0_20px_rgba(42,157,143,0.3)] pulse-glow-teal ring-glow-ping">
                     {step.step}
                   </div>
                   {idx < PROCESS_STEPS.length - 1 && (

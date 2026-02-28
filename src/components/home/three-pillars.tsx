@@ -15,9 +15,9 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 const pillarStyles = [
-  { iconBg: "bg-terracotta/10", iconText: "text-terracotta", glowShadow: "group-hover:shadow-[0_8px_40px_rgba(231,111,81,0.18),0_0_0_1px_rgba(231,111,81,0.08)]", topBorder: "border-top-terracotta" },
-  { iconBg: "bg-teal/10", iconText: "text-teal", glowShadow: "group-hover:shadow-[0_8px_40px_rgba(42,157,143,0.18),0_0_0_1px_rgba(42,157,143,0.08)]", topBorder: "border-top-teal" },
-  { iconBg: "bg-navy/10", iconText: "text-navy-light", glowShadow: "group-hover:shadow-[0_8px_40px_rgba(27,58,92,0.18),0_0_0_1px_rgba(27,58,92,0.08)]", topBorder: "border-top-navy" },
+  { iconBg: "bg-terracotta/10", iconText: "text-terracotta", iconGlow: "icon-glow-terracotta", glowShadow: "group-hover:shadow-[0_8px_40px_rgba(231,111,81,0.18),0_0_0_1px_rgba(231,111,81,0.08)]", topBorder: "border-top-terracotta" },
+  { iconBg: "bg-teal/10", iconText: "text-teal", iconGlow: "icon-glow-teal", glowShadow: "group-hover:shadow-[0_8px_40px_rgba(42,157,143,0.18),0_0_0_1px_rgba(42,157,143,0.08)]", topBorder: "border-top-teal" },
+  { iconBg: "bg-navy/10", iconText: "text-navy-light", iconGlow: "icon-glow-navy", glowShadow: "group-hover:shadow-[0_8px_40px_rgba(27,58,92,0.18),0_0_0_1px_rgba(27,58,92,0.08)]", topBorder: "border-top-navy" },
 ];
 
 export function ThreePillars() {
@@ -46,7 +46,7 @@ export function ThreePillars() {
                 variants={cardHoverVariants}
                 className={`bg-white rounded-2xl p-8 md:p-10 border border-fog h-full cursor-default transition-shadow duration-400 ${style.glowShadow} ${style.topBorder}`}
               >
-                <div className={`w-16 h-16 rounded-2xl ${style.iconBg} flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}>
+                <div className={`w-16 h-16 rounded-2xl ${style.iconBg} ${style.iconGlow} flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}>
                   <Icon className={`w-8 h-8 ${style.iconText}`} />
                 </div>
                 <h3 className="font-serif text-xl text-navy mb-3">

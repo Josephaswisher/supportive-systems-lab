@@ -1,99 +1,110 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { heroVariants } from "@/lib/animations";
 
 export function Hero() {
   return (
     <section
       aria-label="Hero"
       className="relative min-h-screen min-h-[100svh] flex items-center justify-center overflow-hidden"
+      style={{ background: "#0a1628" }}
     >
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-dark via-navy to-navy-light" />
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/35 to-transparent pointer-events-none" />
-      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
-
-      {/* Radial glow behind headline */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-teal/[0.06] blur-[140px] pointer-events-none" />
-      <div className="absolute top-[40%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-terracotta/[0.04] blur-[100px] pointer-events-none" />
-
-      {/* Organic blob decorations — animated drift */}
-      <motion.svg
-        className="absolute top-20 -left-32 w-96 h-96 opacity-10"
-        viewBox="0 0 200 200"
-        animate={{ x: [0, 15, 0], y: [0, -10, 0], rotate: [0, 5, 0] }}
-        transition={{ repeat: Infinity, duration: 20, ease: "easeInOut" }}
+      {/* ===== BACKGROUND VIDEO ===== */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        style={{ opacity: 0.7 }}
       >
-        <path
-          fill="#2A9D8F"
-          d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.5,90,-16.3,88.6,-0.8C87.2,14.6,81.8,29.2,73.1,41.2C64.4,53.2,52.4,62.6,39.1,70.2C25.8,77.8,12.9,83.5,-1.4,85.9C-15.7,88.3,-31.4,87.4,-44.6,80.6C-57.8,73.8,-68.5,61.1,-75.8,46.8C-83.1,32.5,-87,16.2,-86.4,0.3C-85.9,-15.6,-80.9,-31.2,-72.4,-43.8C-63.9,-56.4,-51.9,-66,-38.8,-73.8C-25.7,-81.6,-12.8,-87.6,1.3,-89.8C15.5,-92,30.6,-83.6,44.7,-76.4Z"
-          transform="translate(100 100)"
-        />
-      </motion.svg>
-      <motion.svg
-        className="absolute bottom-20 -right-20 w-80 h-80 opacity-[0.08]"
-        viewBox="0 0 200 200"
-        animate={{ x: [0, -12, 0], y: [0, 8, 0], rotate: [0, -4, 0] }}
-        transition={{ repeat: Infinity, duration: 18, ease: "easeInOut" }}
-      >
-        <path
-          fill="#E76F51"
-          d="M39.5,-65.3C52.9,-59.6,67,-52.4,74.1,-40.8C81.2,-29.2,81.3,-13.1,78.1,1.8C75,16.8,68.6,30.6,59.7,42.1C50.8,53.7,39.4,62.9,26.3,68.6C13.2,74.3,-1.5,76.5,-15.4,73.3C-29.3,70.1,-42.3,61.5,-53.3,50.6C-64.3,39.7,-73.3,26.5,-77.4,11.3C-81.6,-3.9,-80.8,-21.1,-73.3,-34.3C-65.8,-47.5,-51.5,-56.7,-37.2,-62.1C-22.9,-67.5,-8.6,-69.2,3.1,-74.5C14.7,-79.9,26.1,-71,39.5,-65.3Z"
-          transform="translate(100 100)"
-        />
-      </motion.svg>
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
+      {/* Dark overlay to blend video with effects */}
+      <div className="absolute inset-0 bg-[#0a1628]/50 z-0" />
 
-      {/* Grain overlay */}
-      <div className="absolute inset-0 opacity-[0.04] bg-[url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20256%20256%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22noise%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.9%22%20numOctaves%3D%224%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url(%23noise)%22%2F%3E%3C%2Fsvg%3E')] bg-repeat bg-[length:256px_256px] pointer-events-none" />
+      {/* ===== FOG LIGHT BLOBS ===== */}
+      <div className="hero-fog hero-fog--amber" />
+      <div className="hero-fog hero-fog--ice" />
+      <div className="hero-fog hero-fog--violet" />
+      <div className="hero-fog hero-fog--teal" />
+      <div className="hero-fog hero-fog--rose" />
+      {/* Extra fog layers for density */}
+      <div className="hero-fog hero-fog--amber-2" />
+      <div className="hero-fog hero-fog--deep" />
+      <div className="hero-fog hero-fog--haze" />
 
-      {/* Content */}
+      {/* ===== LASER BEAMS ===== */}
+      <div className="hero-shaft hero-shaft--1" />
+      <div className="hero-shaft hero-shaft--2" />
+      <div className="hero-shaft hero-shaft--3" />
+      <div className="hero-shaft hero-shaft--4" />
+      <div className="hero-shaft hero-shaft--5" />
+      <div className="hero-shaft hero-shaft--6" />
+
+      {/* ===== DENSE FOG — parts to reveal content ===== */}
+      <div className="hero-fog-dense" />
+      <div className="hero-fog-dense-2" />
+
+      {/* ===== GRAIN ===== */}
+      <div className="absolute inset-0 opacity-[0.04] bg-[url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20256%20256%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22noise%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.9%22%20numOctaves%3D%224%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url(%23noise)%22%2F%3E%3C%2Fsvg%3E')] bg-repeat bg-[length:256px_256px] pointer-events-none z-[4]" />
+
+      {/* ===== SCANLINES ===== */}
+      <div className="hero-scanlines" />
+
+      {/* ===== VIGNETTE ===== */}
+      <div className="hero-vignette" />
+
+      {/* ===== CONTENT ===== */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-8 md:pt-10 text-center">
-        <motion.div
-          variants={heroVariants}
-          initial="hidden"
-          animate="visible"
-          className="mb-6"
-        >
+        {/* Haze glow behind text */}
+        <div className="hero-text-haze" />
+
+        {/* Eyebrow */}
+        <div className="hero-reveal hero-reveal--eyebrow">
           <span className="inline-flex items-center text-white text-sm uppercase tracking-[0.25em] font-semibold mb-6 eyebrow-dash drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] bg-white/10 ring-1 ring-white/25 rounded-full px-4 py-1.5">
             Nonprofit Operations Architecture
           </span>
-        </motion.div>
+        </div>
 
-        <motion.h1
-          variants={heroVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.15 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] tracking-tight [text-wrap:balance] drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)]"
-        >
+        {/* Headline */}
+        <h1 className="hero-reveal hero-reveal--line1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] tracking-tight [text-wrap:balance] drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)]">
           Your mission deserves
-          <br />
-          <span className="text-shimmer">operational gravity.</span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          variants={heroVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.35 }}
-          className="mt-8 text-lg md:text-xl text-white/92 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty] drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)]"
-        >
+        {/* Chris's headshot — the big reveal */}
+        <div className="hero-reveal hero-reveal--headshot mt-10 flex flex-col items-center gap-4">
+          <div className="hero-headshot-ring">
+            <Image
+              src="/images/chris-pearson.jpg"
+              alt="Chris Pearson, MSW, MBA"
+              width={220}
+              height={220}
+              className="rounded-full object-cover w-[220px] h-[220px]"
+              priority
+            />
+          </div>
+          <span className="text-white/90 text-lg font-semibold tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
+            Chris Pearson, MSW, MBA
+          </span>
+          <span className="text-white/60 text-sm tracking-wider uppercase">
+            Founder
+          </span>
+        </div>
+
+        {/* Supporting copy */}
+        <p className="hero-reveal hero-reveal--copy mt-8 text-lg md:text-xl text-white/92 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty] drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)]">
           We design the systems, rituals, and decision pathways that keep
           nonprofits steady under pressure, so your team can focus on people and
           outcomes.
-        </motion.p>
+        </p>
 
-        <motion.div
-          variants={heroVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.55 }}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto bg-white/5 ring-1 ring-white/15 rounded-2xl p-3 sm:p-4 backdrop-blur-sm"
-        >
+        {/* CTAs */}
+        <div className="hero-reveal hero-reveal--cta mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto bg-white/5 ring-1 ring-white/15 rounded-2xl p-3 sm:p-4 backdrop-blur-sm">
           <Button
             asChild
             size="lg"
@@ -112,30 +123,12 @@ export function Hero() {
           >
             <Link href="/services">Explore Services</Link>
           </Button>
-        </motion.div>
-
-        <motion.p
-          variants={heroVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.72 }}
-          className="mt-5 text-sm text-white/75"
-        >
-          Trusted by mission-driven teams building durable impact.
-        </motion.p>
-
-        <motion.div
-          variants={heroVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.8 }}
-          className="mx-auto mt-4 h-px w-44 bg-gradient-to-r from-transparent via-white/50 to-transparent"
-        />
+        </div>
       </div>
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 z-10 hero-reveal hero-reveal--scroll"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
       >

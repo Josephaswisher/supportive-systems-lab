@@ -23,7 +23,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
+        "fixed top-0 w-full z-50 transition-all duration-300 backdrop-saturate-150",
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-fog"
           : "bg-navy-dark/60 backdrop-blur-md border-b border-white/20 shadow-[0_10px_30px_rgba(3,12,24,0.35)]"
@@ -36,8 +36,8 @@ export function Navbar() {
             className={cn(
               "font-serif text-2xl font-bold transition-colors rounded-lg px-2 py-0.5",
               scrolled
-                ? "text-navy"
-                : "text-white bg-white/18 ring-1 ring-white/35 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]"
+                ? "text-navy hover:shadow-[0_0_20px_rgba(42,157,143,0.25)]"
+                : "text-white bg-white/18 ring-1 ring-white/35 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] hover:shadow-[0_0_24px_rgba(255,255,255,0.3)]"
             )}
           >
             S
@@ -63,7 +63,7 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors relative py-1 px-2 rounded-md",
+                "text-sm font-medium transition-colors relative py-1 px-2 rounded-md micro-tilt",
                 pathname === item.href
                   ? scrolled
                     ? "text-teal"

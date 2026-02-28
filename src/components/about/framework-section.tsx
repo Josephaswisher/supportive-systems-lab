@@ -66,7 +66,7 @@ export function FrameworkSection() {
             className={`bg-white rounded-2xl p-8 border border-fog ${pillar.borderTop} hover:shadow-lg hover:border-fog/80 transition-all duration-300 card-inner-glow`}
           >
             <div
-              className={`w-14 h-14 rounded-xl ${pillar.bgColor} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}
+              className={`w-14 h-14 rounded-xl ${pillar.bgColor} flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 ${pillar.color === "text-terracotta" ? "icon-glow-terracotta" : pillar.color === "text-teal" ? "icon-glow-teal" : "icon-glow-navy"}`}
             >
               <pillar.icon className={`w-7 h-7 ${pillar.color}`} />
             </div>

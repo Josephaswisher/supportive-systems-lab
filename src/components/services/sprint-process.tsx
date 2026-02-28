@@ -49,7 +49,7 @@ export function SprintProcess() {
           <motion.div key={step.title} variants={fadeUpVariants}>
             <div className="relative text-center">
               {/* Step number */}
-              <div className="w-14 h-14 rounded-full bg-teal text-white flex items-center justify-center mx-auto mb-4 font-serif text-xl shadow-[0_0_15px_rgba(42,157,143,0.3)] pulse-glow-teal">
+              <div className="w-14 h-14 rounded-full bg-teal text-white flex items-center justify-center mx-auto mb-4 font-serif text-xl shadow-[0_0_15px_rgba(42,157,143,0.3)] pulse-glow-teal ring-glow-ping">
                 {step.num}
               </div>
               {/* Connector line */}
@@ -72,8 +72,10 @@ export function SprintProcess() {
 
       {/* Pricing callout */}
       <FadeIn>
-        <div className="bg-navy-dark rounded-2xl p-8 md:p-10 text-center grain-overlay relative overflow-hidden shadow-[0_8px_40px_rgba(15,36,56,0.5)]">
+        <div className="bg-navy-dark rounded-2xl p-8 md:p-10 text-center grain-overlay relative overflow-hidden shadow-[0_8px_40px_rgba(15,36,56,0.5)] edge-glow-teal">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-teal/[0.06] rounded-full blur-[80px] pointer-events-none" />
+          <div className="glow-orb w-[180px] h-[180px] bg-teal/[0.06] top-[25%] left-[15%] blur-[50px]" />
+          <div className="glow-orb w-[140px] h-[140px] bg-terracotta/[0.04] top-[55%] left-[80%] blur-[45px]" style={{ animationDelay: "4s" }} />
           <div className="relative z-10">
             <p className="font-serif text-2xl md:text-3xl text-white mb-3">
               Legacy models often spend six months describing problems.

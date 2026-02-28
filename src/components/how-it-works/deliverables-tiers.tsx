@@ -63,7 +63,7 @@ export function DeliverablesTiers() {
               whileHover="hover"
               className={`bg-white rounded-2xl p-8 border border-fog h-full cursor-default ${tierColors[idx]}`}
             >
-              <div className="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5">
+              <div className="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-5 icon-glow-teal">
                 <tier.icon className="w-7 h-7 text-teal" />
               </div>
               <h3 className="font-serif text-xl text-navy mb-1">
