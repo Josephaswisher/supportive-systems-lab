@@ -15,22 +15,24 @@ export function ImpactStats() {
         subtitle="Year-one outcomes after implementing structured operational systems."
         light
       />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 relative">
         <div className="relative rounded-2xl bg-white/[0.05] ring-1 ring-white/10 p-6 md:p-7 backdrop-blur-sm">
           <StatCounter value={145} label="Residents Served" />
-          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-gradient-to-b from-transparent via-teal/30 to-transparent" />
         </div>
         <div className="relative rounded-2xl bg-white/[0.05] ring-1 ring-white/10 p-6 md:p-7 backdrop-blur-sm">
           <StatCounter value={52} label="Children Housed" />
-          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-16 bg-gradient-to-b from-transparent via-teal/30 to-transparent" />
         </div>
         <div className="relative rounded-2xl bg-white/[0.05] ring-1 ring-white/10 p-6 md:p-7 backdrop-blur-sm">
-          <StatCounter
-            value={500}
-            suffix="K+"
-            prefix="$"
-            label="In Preventive Savings"
-          />
+          <StatCounter value={500} suffix="K+" prefix="$" label="In Preventive Savings" />
+        </div>
+        <div className="relative rounded-2xl bg-white/[0.05] ring-1 ring-white/10 p-6 md:p-7 backdrop-blur-sm">
+          <StatCounter value={40} suffix="%" label="Faster Staff Onboarding" />
+        </div>
+        <div className="relative rounded-2xl bg-white/[0.05] ring-1 ring-white/10 p-6 md:p-7 backdrop-blur-sm">
+          <StatCounter value={85} suffix="+" label="SOPs Delivered" />
+        </div>
+        <div className="relative rounded-2xl bg-white/[0.05] ring-1 ring-white/10 p-6 md:p-7 backdrop-blur-sm">
+          <StatCounter value={30} suffix="+" label="Organizations Transformed" />
         </div>
       </div>
     </SectionWrapper>

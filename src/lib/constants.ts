@@ -32,6 +32,9 @@ export const STATS = [
   { value: 145, suffix: "", label: "Residents Stabilized" },
   { value: 52, suffix: "", label: "Children Supported" },
   { value: 500, suffix: "K+", prefix: "$", label: "Avoided Acute-Care Costs" },
+  { value: 12, suffix: "+", label: "Years Nonprofit Leadership" },
+  { value: 30, suffix: "+", label: "Organizations Served" },
+  { value: 96, suffix: "%", label: "Client Retention Rate" },
 ] as const;
 
 export const SERVICES = [

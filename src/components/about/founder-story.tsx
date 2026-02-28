@@ -58,14 +58,15 @@ export function FounderStory() {
               <strong className="text-navy">
                 Master of Social Work
               </strong>{" "}
-              (the heart), a{" "}
-              <strong className="text-navy">business degree</strong> (the head),
-              and years of{" "}
+              (the heart), an{" "}
+              <strong className="text-navy">MBA</strong> (the head),
+              and{" "}
               <strong className="text-navy">
-                hands-on operational leadership
+                12+ years of hands-on operational leadership
               </strong>{" "}
-              (the backbone). As a veteran, he brings disciplined execution and
-              calm systems thinking to high-stakes nonprofit environments.
+              across 30+ organizations (the backbone). As a veteran, he brings
+              disciplined execution and calm systems thinking to high-stakes
+              nonprofit environments.
             </p>
 
             <p>

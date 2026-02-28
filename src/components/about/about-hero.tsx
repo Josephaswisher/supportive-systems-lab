@@ -59,6 +59,27 @@ export function AboutHero() {
           <span className="inline-block w-px h-4 bg-teal-light/70" aria-hidden="true" />
           <span>Operational Command</span>
         </motion.p>
+
+        {/* Stats row */}
+        <motion.div
+          variants={heroVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.45 }}
+          className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          {[
+            { value: "12+", label: "Years Leading Nonprofits" },
+            { value: "30+", label: "Organizations Served" },
+            { value: "145", label: "Residents Stabilized" },
+            { value: "$500K+", label: "In Preventive Savings" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="text-2xl md:text-3xl font-serif text-teal-light font-bold">{stat.value}</div>
+              <div className="text-white/60 text-xs md:text-sm mt-1 uppercase tracking-wider">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
