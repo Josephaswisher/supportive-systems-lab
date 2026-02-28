@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/ui/logo";
 import { heroVariants } from "@/lib/animations";
 
 export function Hero() {
@@ -52,13 +53,27 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-8 md:pt-10 text-center">
+        {/* Logo mark */}
         <motion.div
           variants={heroVariants}
           initial="hidden"
           animate="visible"
-          className="mb-6"
+          className="mb-4 sm:mb-5"
         >
-          <span className="inline-flex items-center text-white text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] font-semibold mb-6 eyebrow-dash drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] bg-white/10 ring-1 ring-white/25 rounded-full px-3 sm:px-4 py-1.5">
+          <Logo
+            size="xl"
+            className="mx-auto ring-white/20 shadow-[0_0_40px_rgba(26,122,109,0.25)]"
+          />
+        </motion.div>
+
+        <motion.div
+          variants={heroVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.1 }}
+          className="mb-5 sm:mb-6"
+        >
+          <span className="inline-flex items-center text-white text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.25em] font-semibold eyebrow-dash drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] bg-white/10 ring-1 ring-white/25 rounded-full px-3 sm:px-4 py-1.5">
             Nonprofit Operations Architecture
           </span>
         </motion.div>
@@ -67,8 +82,8 @@ export function Hero() {
           variants={heroVariants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.15 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] tracking-tight [text-wrap:balance] drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)]"
+          transition={{ delay: 0.2 }}
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif text-white leading-[1.08] tracking-tight [text-wrap:balance] drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)]"
         >
           Your mission deserves
           <br />
@@ -79,8 +94,8 @@ export function Hero() {
           variants={heroVariants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.35 }}
-          className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-white/95 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty] drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)]"
+          transition={{ delay: 0.4 }}
+          className="mt-5 sm:mt-8 text-sm sm:text-base md:text-lg lg:text-xl text-white/95 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty] drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)]"
         >
           We design the systems, rituals, and decision pathways that keep
           nonprofits steady under pressure, so your team can focus on people and
@@ -91,7 +106,7 @@ export function Hero() {
           variants={heroVariants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.55 }}
+          transition={{ delay: 0.6 }}
           className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto bg-white/5 ring-1 ring-white/15 rounded-2xl p-3 sm:p-4 backdrop-blur-sm"
         >
           <Button
@@ -118,7 +133,7 @@ export function Hero() {
           variants={heroVariants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.72 }}
+          transition={{ delay: 0.8 }}
           className="mt-5 text-sm text-white/90"
         >
           Trusted by mission-driven teams building durable impact.
@@ -128,14 +143,14 @@ export function Hero() {
           variants={heroVariants}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.85 }}
           className="mx-auto mt-4 h-px w-44 bg-gradient-to-r from-transparent via-white/50 to-transparent"
         />
       </div>
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
       >

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/ui/logo";
 import {
   Sheet,
   SheetContent,
@@ -32,16 +33,7 @@ export function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group logo-hover-effect">
-          <span
-            className={cn(
-              "font-serif text-xl sm:text-2xl font-bold transition-colors rounded-lg px-2 py-0.5",
-              scrolled
-                ? "text-navy"
-                : "text-white bg-white/18 ring-1 ring-white/35 drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]"
-            )}
-          >
-            S
-          </span>
+          <Logo size="sm" />
           <div className="hidden sm:block">
             <span
               className={cn(
@@ -113,7 +105,8 @@ export function Navbar() {
             side="right"
             className="w-full max-w-sm bg-white p-0"
           >
-            <div className="p-6">
+            <div className="p-6 flex items-center gap-3">
+              <Logo size="md" />
               <SheetTitle className="font-serif text-navy text-xl">
                 Supportive Systems Lab
               </SheetTitle>
