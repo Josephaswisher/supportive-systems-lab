@@ -10,105 +10,96 @@ export function Hero() {
   return (
     <section
       aria-label="Hero"
-      className="relative min-h-screen min-h-[100svh] flex items-center justify-center overflow-hidden"
-      style={{ background: "#0a1628" }}
+      className="relative min-h-screen min-h-[100svh] flex items-center justify-center overflow-hidden bg-navy-dark"
     >
-      {/* ===== BACKGROUND VIDEO ===== */}
+      {/* Background video */}
       <video
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover z-0"
-        style={{ opacity: 0.7 }}
+        style={{ opacity: 0.5 }}
       >
         <source src="/hero-bg.mp4" type="video/mp4" />
       </video>
-      {/* Dark overlay to blend video with effects */}
-      <div className="absolute inset-0 bg-[#0a1628]/50 z-0" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-navy-dark/60 z-0" />
+      {/* Subtle vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(15,36,56,0.7)_100%)] z-0" />
 
-      {/* ===== FOG LIGHT BLOBS ===== */}
-      <div className="hero-fog hero-fog--amber" />
-      <div className="hero-fog hero-fog--ice" />
-      <div className="hero-fog hero-fog--violet" />
-      <div className="hero-fog hero-fog--teal" />
-      <div className="hero-fog hero-fog--rose" />
-      {/* Extra fog layers for density */}
-      <div className="hero-fog hero-fog--amber-2" />
-      <div className="hero-fog hero-fog--deep" />
-      <div className="hero-fog hero-fog--haze" />
-
-      {/* ===== LASER BEAMS ===== */}
-      <div className="hero-shaft hero-shaft--1" />
-      <div className="hero-shaft hero-shaft--2" />
-      <div className="hero-shaft hero-shaft--3" />
-      <div className="hero-shaft hero-shaft--4" />
-      <div className="hero-shaft hero-shaft--5" />
-      <div className="hero-shaft hero-shaft--6" />
-
-      {/* ===== DENSE FOG — parts to reveal content ===== */}
-      <div className="hero-fog-dense" />
-      <div className="hero-fog-dense-2" />
-
-      {/* ===== GRAIN ===== */}
-      <div className="absolute inset-0 opacity-[0.04] bg-[url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20256%20256%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cfilter%20id%3D%22noise%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.9%22%20numOctaves%3D%224%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url(%23noise)%22%2F%3E%3C%2Fsvg%3E')] bg-repeat bg-[length:256px_256px] pointer-events-none z-[4]" />
-
-      {/* ===== SCANLINES ===== */}
-      <div className="hero-scanlines" />
-
-      {/* ===== VIGNETTE ===== */}
-      <div className="hero-vignette" />
-
-      {/* ===== CONTENT ===== */}
+      {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 pt-8 md:pt-10 text-center">
-        {/* Haze glow behind text */}
-        <div className="hero-text-haze" />
-
         {/* Eyebrow */}
-        <div className="hero-reveal hero-reveal--eyebrow">
-          <span className="inline-flex items-center text-white text-sm uppercase tracking-[0.25em] font-semibold mb-6 eyebrow-dash drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] bg-white/10 ring-1 ring-white/25 rounded-full px-4 py-1.5">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <span className="inline-flex items-center text-white/80 text-sm uppercase tracking-[0.25em] font-semibold mb-6 eyebrow-dash bg-white/10 ring-1 ring-white/20 rounded-full px-4 py-1.5">
             Nonprofit Operations Architecture
           </span>
-        </div>
+        </motion.div>
 
         {/* Headline */}
-        <h1 className="hero-reveal hero-reveal--line1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] tracking-tight [text-wrap:balance] drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)]">
+        <motion.h1
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.05] tracking-tight [text-wrap:balance]"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           Your mission deserves
-        </h1>
+        </motion.h1>
 
-        {/* Chris's headshot — the big reveal */}
-        <div className="hero-reveal hero-reveal--headshot mt-10 flex flex-col items-center gap-4">
-          <div className="hero-headshot-ring">
+        {/* Chris's headshot */}
+        <motion.div
+          className="mt-10 flex flex-col items-center gap-4"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
+          <div className="rounded-full p-1 bg-gradient-to-br from-terracotta/60 via-teal/40 to-navy-light/60">
             <Image
               src="/images/chris-pearson.jpg"
               alt="Chris Pearson, MSW, MBA"
-              width={220}
-              height={220}
-              className="rounded-full object-cover w-[220px] h-[220px]"
+              width={200}
+              height={200}
+              className="rounded-full object-cover w-[200px] h-[200px] border-3 border-navy-dark"
               priority
             />
           </div>
-          <span className="text-white/90 text-lg font-semibold tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
+          <span className="text-white/90 text-lg font-semibold tracking-wide">
             Chris Pearson, MSW, MBA
           </span>
-          <span className="text-white/60 text-sm tracking-wider uppercase">
+          <span className="text-white/55 text-sm tracking-wider uppercase">
             Founder
           </span>
-        </div>
+        </motion.div>
 
         {/* Supporting copy */}
-        <p className="hero-reveal hero-reveal--copy mt-8 text-lg md:text-xl text-white/92 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty] drop-shadow-[0_2px_14px_rgba(0,0,0,0.4)]">
+        <motion.p
+          className="mt-8 text-lg md:text-xl text-white/85 font-medium max-w-3xl mx-auto leading-relaxed [text-wrap:pretty]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
           We design the systems, rituals, and decision pathways that keep
           nonprofits steady under pressure, so your team can focus on people and
           outcomes.
-        </p>
+        </motion.p>
 
         {/* CTAs */}
-        <div className="hero-reveal hero-reveal--cta mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto bg-white/5 ring-1 ring-white/15 rounded-2xl p-3 sm:p-4 backdrop-blur-sm">
+        <motion.div
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
+        >
           <Button
             asChild
             size="lg"
-            className="w-full sm:w-auto bg-terracotta hover:bg-terracotta-dark text-white rounded-xl px-8 py-6 text-base font-semibold btn-glow-terracotta ring-1 ring-white/20"
+            className="w-full sm:w-auto bg-terracotta hover:bg-terracotta-dark text-white rounded-xl px-8 py-6 text-base font-semibold ring-1 ring-white/20"
           >
             <Link href="/contact">
               Book a Discovery Call{" "}
@@ -119,22 +110,28 @@ export function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="w-full sm:w-auto border-2 border-white/65 text-white hover:bg-white/16 hover:border-white rounded-xl px-8 py-6 text-base bg-white/5 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+            className="w-full sm:w-auto border-2 border-white/50 text-white hover:bg-white/10 hover:border-white rounded-xl px-8 py-6 text-base transition-all duration-300"
           >
             <Link href="/services">Explore Services</Link>
           </Button>
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 z-10 hero-reveal hero-reveal--scroll"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{
+          opacity: { duration: 0.6, delay: 2 },
+          y: { repeat: Infinity, duration: 2, ease: "easeInOut", delay: 2 },
+        }}
       >
-        <span className="text-[11px] tracking-[0.2em] uppercase text-white/60">Scroll</span>
+        <span className="text-[11px] tracking-[0.2em] uppercase text-white/50">
+          Scroll
+        </span>
         <div className="rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1.5">
-          <ChevronDown className="w-5 h-5 text-white/70" />
+          <ChevronDown className="w-5 h-5 text-white/60" />
         </div>
       </motion.div>
     </section>
